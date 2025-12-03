@@ -2,4 +2,4 @@
 13~14주차 조별활동용 사이트
 
 ## 소개
-[사이트](https://legundg.github.io/Testing/)와 조원: 이정민(조장), 최운혁, 최찬영
+[사이트](https://legundg.github.io/OpensourceDev_n_Use/)와 조원: 이정민(조장), 최운혁, 최찬영
