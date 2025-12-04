@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>문화생활 메인 레이아웃 미리보기</title>
+<title>문화 생활과 소개</title>
 
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
 
@@ -58,19 +58,19 @@ main{
   padding:20px;
 }
 
-/* ===== 왼쪽 영역 ===== */
+/* ===== 좌우 영역 ===== */
 .sidebar{
   display:flex;
   flex-direction:column;
-  gap:18px;
+  gap:20px;
 }
 
 .avatar{
-  width:80px;height:80px;
+  width:160px;height:80px;
   margin:auto;
-  border-radius:50%;
+  border-radius:3%;
   display:flex;align-items:center;justify-content:center;
-  background:linear-gradient(135deg,#60a5fa,#a855f7);
+  background:linear-gradient(90deg,#0e4a84,#0e0e4e);
   font-weight:700;font-size:1.1rem;color:#fff;
 }
 
@@ -85,18 +85,45 @@ main{
   color:#374151;
 }
 
+.content{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+.placeholder-box{
+  height:240px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:0.95rem;
+  color:#6b7280;
+  border-radius:14px;
+  border:2px dashed rgba(160,160,160,0.35);
+}
+
+.category-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+.category-title{
+  text-align:center;
+  font-size:1rem;
+  font-weight:600;
+  margin-bottom:15px;
+}
+
 </style>
 </head>
-
 <body>
-
 <header>
   <div class="logo">문화생활</div>
   <nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Archive</a>
-    <a href="#">Contact</a>
+    <a href="#">메인</a>
+    <a href="#">영화</a>
+    <a href="#">연극</a>
+    <a href="#">뮤지컬</a>
   </nav>
 </header>
 
@@ -105,7 +132,7 @@ main{
   <!-- 왼쪽 프로필,카테고리 -->
   <aside class="sidebar">
     <section class="card">
-      <div class="avatar">CL</div>
+      <div class="avatar">HYU</div>
       <div class="profile">
         <p>문화생활 기록</p>
         <p style="font-size:0.85rem;color:#8795a1;">(여기에 소개문구가 들어갈 예정)</p>
@@ -122,10 +149,40 @@ main{
     </section>
   </aside>
 
+  <!-- 오른쪽 메인 콘텐츠 -->
+  <section class="content">
+    <section class="card">
+      <p style="font-size:0.95rem;color:#4b5563;text-align:center;">
+        📌 이 영역은 블로그 콘텐츠가 들어가는 메인 화면입니다.<br>
+        아래 세 칸에 카테고리별 글 목록이 배치될 예정입니다.
+      </p>
+    </section>
+
+    <div class="category-grid">
+
+      <div>
+        <div class="category-title">🎬 영화</div>
+        <div class="placeholder-box">← 여기에 영화 글 목록 표시 예정</div>
+      </div>
+
+      <div>
+        <div class="category-title">🎭 연극</div>
+        <div class="placeholder-box">← 여기에 연극 글 목록 표시 예정</div>
+      </div>
+
+      <div>
+        <div class="category-title">🎙 뮤지컬</div>
+        <div class="placeholder-box">← 여기에 뮤지컬 글 목록 표시 예정</div>
+      </div>
+
+    </div>
+  </section>
+
+
 </main>
 
 <footer style="text-align:center;margin:30px 0;color:#7c8694;font-size:0.8rem;">
-  © 2025 문화생활 블로그 · 레이아웃 미리보기
+  © 2025 문화생활 블로그
 </footer>
 
 </body>
