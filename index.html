@@ -104,14 +104,32 @@ main{
 
 .category-grid{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
+  grid-template-columns:1.4fr 1fr 1fr;
   gap:15px;
+  align-items: start;
 }
 .category-title{
   text-align:center;
   font-size:1rem;
   font-weight:600;
   margin-bottom:15px;
+}
+.post-list {
+  list-style: disc inside; /* 글머리 기호 추가 */
+  padding-left: 8px;
+  margin: 0;
+}
+
+.post-list li {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: #374151;
+  line-height: 1.5;
+}
+
+.post-list li a:hover {
+  text-decoration: underline;
+  color: #0e4a84;
 }
 
 </style>
@@ -140,10 +158,10 @@ main{
     </section>
 
     <section class="card">
-      <h3>카테고리</h3>
+      <a href="index.html">카테고리</a>
       <ul class="category-list">
         <li>🎬 영화 (Film)</li>
-        <a harf="moviecategory.html">>🎭 연극</a>
+        <a href="moviecategory.html">🎭 연극 (Play)</a>
         <li>🎙 뮤지컬 (Musical)</li>
       </ul>
     </section>
@@ -168,9 +186,9 @@ main{
       <div>
         <div class="category-title">🎭 연극</div>
         <ul class="post-list">
-          <li><a href="아마데우스.html">아마데우스 — 리뷰 보기</a></li>
-          <li><a href="쉬어메드니스.html">아마데우스 — 리뷰 보기</a></li>
-          <li><a href="그을린 사랑.html">아마데우스 — 리뷰 보기</a></li>
+          <li><a href="아마데우스.html">아마데우스 리뷰 보기</a></li>
+          <li><a href="쉬어메드니스.html">쉬어메드니스 리뷰 보기</a></li>
+          <li><a href="그을린사랑2.html">그을린사랑 리뷰 보기</a></li>
         </ul>
       </div>
       <div>

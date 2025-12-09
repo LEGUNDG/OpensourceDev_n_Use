@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>문화 생활과 소개</title>
+
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+
+<style>
+/* ===== 초기 설정 ===== */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:Pretendard, system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:linear-gradient(135deg,#e8f5ff,#ffffff);
+  color:#1f2933;
+  min-height:100vh;
+  line-height:1.7;
+}
+a{text-decoration:none;color:inherit;}
+
+/* ===== 헤더 ===== */
+header{
+  position:sticky;top:0;z-index:10;
+  padding:10px 32px;
+  display:flex;justify-content:space-between;align-items:center;
+  background:rgba(255,255,255,0.6);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,255,255,0.8);
+  box-shadow:0 6px 18px rgba(0,0,0,0.07);
+}
+.logo{
+  font-size:1.25rem;font-weight:700;
+}
+nav a{
+  margin-left:18px;
+  font-size:0.9rem;
+  opacity:0.85;
+}
+nav a:hover{opacity:1;}
+
+/* ===== 레이아웃 ===== */
+main{
+  max-width:1200px;
+  margin:32px auto;
+  padding:0 16px;
+  display:grid;
+  grid-template-columns:260px 1fr;
+  gap:24px;
+}
+
+/* ===== Glass Card ===== */
+.card{
+  width: 50;
+  background:rgba(255,255,255,0.65);
+  backdrop-filter:blur(16px);
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,0.9);
+  box-shadow:0 16px 38px rgba(0,0,0,0.09);
+  padding:20px;
+  
+}
+
+/* ===== 좌우 영역 ===== */
+.sidebar{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.avatar{
+  width:160px;height:80px;
+  margin:auto;
+  border-radius:3%;
+  display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(90deg,#0e4a84,#0e0e4e);
+  font-weight:700;font-size:1.1rem;color:#fff;
+}
+
+.profile{text-align:center;margin-top:10px;}
+.profile p{font-size:0.9rem;color:#4b5563;margin-top:6px;}
+
+.sidebar h3{font-size:1rem;margin-bottom:8px;}
+.category-list{list-style:none;margin-top:6px;}
+.category-list li{
+  padding:8px 0;
+  font-size:0.95rem;
+  color:#374151;
+}
+
+.content{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+.placeholder-box{
+  height:240px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:0.95rem;
+  color:#6b7280;
+  border-radius:14px;
+  border:2px dashed rgba(160,160,160,0.35);
+}
+
+.category-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+.category-title{
+  text-align:center;
+  font-size:1rem;
+  font-weight:600;
+  margin-bottom:15px;
+}
+
+h1{font-size:1.5rem;margin-bottom:12px;margin-top:12px}
+h2{margin-top:12px;margin-bottom:12px;font-size:1.3rem;}
+.section
+ {
+  background:rgba(255,255,255,0.7);
+  padding:18px;
+  border-radius:14px;
+  margin-top:12px;
+  border:1px solid rgba(230,230,230,0.8);
+}
+
+.sizeofword {
+  display:inline-block;margin-top:30px;
+  font-weight:600;
+}
+
+.poster2-img {
+    display: block;
+    width: 300px; 
+    height: 500px;   
+    object-fit: cover;
+    object-position: center;
+    border-radius:14px;
+    }
+
+.poster3-img {
+    display: block;
+    width: 200px; 
+    height: 200px;   
+    object-fit: cover;
+    object-position: center;
+    border-radius:14px;
+    }
+
+.gallery {
+    display: flex; 
+    gap: 50px;   
+    }
+
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">문화생활</div>
+  <nav>
+    <a href="#">메인</a>
+    <a href="#">영화</a>
+    <a href="#">연극</a>
+    <a href="#">뮤지컬</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- 왼쪽 프로필,카테고리 -->
+  <aside class="sidebar">
+    <section class="card">
+      <div class="avatar">HYU</div>
+      <div class="profile">
+        <p>문화생활 기록</p>
+        <p style="font-size:0.85rem;color:#8795a1;">(여기에 소개문구가 들어갈 예정)</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <a href="index.html">카테고리</a>
+      <ul class="category-list">
+        <li>🎬 영화 (Film)</li>
+        <a href="moviecategory.html">🎭 연극 (Play)</a>
+        <li>🎙 뮤지컬 (Musical)</li>
+      </ul>
+    </section>
+  </aside>
+
+  <!-- 오른쪽 메인 콘텐츠 -->
+  <section class="content">
+    <section class="card">
+      <p style="font-size:0.95rem;color:#4b5563;text-align:center;">
+        <h1>🎙 그을린사랑 (Incendies)</h1>
+      </p>
+    </section>
+
+    <div class="section">
+        <h2>📌 작품 소개</h2>
+        <img src="https://i.namu.wiki/i/5JYXZnRDyXljffhUDkWJHKggbwML9VMVxoa4pY-oHndpsKe5U8411QIeJNQXilIfVCWTksusP_CdB7D8tthrB7Lw4ZKbDu3sCJWLbqHmE0l1aKtXYvg0ChpGg4mDXwJICz4EeZYfemQE9GeRMv1XgQ.webp" class="poster2-img">
+        <p>
+            <b> 그을린 사랑</b>는 2010년 공개된 캐나다의 미스터리 드라마 영화이며, 드니 빌뇌브가 감독과 각본을 맡았다. 2010년 9월에 베네치아와 토론토 국제 영화제에서 첫 공개됐고 2010년 9월 17일 퀘백에서 개봉했다. 캐나다와 퀘백, 전세계에서 비평적 극찬을 받았고 여러 상들을 수상했다. 2011년에는 아카데미 외국어 영화상 후보에 오르기도 했다. 지니상에서는 최우수 작품상을 포함해 8개 상을 수상했다.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>📖 줄거리</h2>
+        <p>
+             피비린내 나는 내전의 역사와 관련된 어머니의 과거를 밝히기 위해 중동에 있는 어머니의 모국을 찾아가는 캐나다인 쌍둥이에 관한 내용을 담고 있다. 이들이 찾아간 나라의 이름은 언급되지 않지만, 영화의 사건들은 레바논 내전과 특히 수감자 소하 베차라의 이야기에서 많은 영향을 받았다. 영화는 대부분 몬트리올에서 촬영됐고, 요르단에서 며칠 촬영하기도 했다.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>🎭 출연 배우</h2>
+        <div class="gallery">
+            <div>
+                <img src="https://search.pstatic.net/common?type=b&size=3000&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2Fdc64eb62-ab10-4f7a-bb99-d9a93f9c20ef.png" class="poster3-img">
+                <div class="category-title">
+                에르밀 르벨역 남명렬배우
+                </div>
+            </div>
+
+            <div>
+                <img src="https://search.pstatic.net/common?type=b&size=3000&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2F198%2F202005251154219491.png" class="poster3-img">
+                <div class="category-title">
+                나왈 마르완역 이주영배우
+                </div>
+            </div>
+
+            <div>
+                <img src="https://search.pstatic.net/common?type=b&size=3000&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2F180%2F201704281415074911.jpg" class="poster3-img">
+                <div class="category-title">
+                시몽역 이원석배우
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🎼 대표 OST</h2>
+        <p>🎙 You And Whose Army?</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/QQnc-hM80UQ?si=vmWmX5WOvXHcsxjE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p><br>🎙Radiohead - No Surprises</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/u5CVsCnxyXg?si=bW82CUh9dvm5clc6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <div class="section">
+        <h2>📝 감상평</h2>
+        <p>
+        <b>화염</b><br>"워낙 유명한 영화를 먼저 접하고 공연으로 봤는데 간결한 무대와 배우들의 깔끔하고 깊이있는 연기가 좋았다. 전체적으로 지루한 느낌이 약간 있었지만 글이 주는 탄탄함이 있어서 좋은 공연임에는 틀림없는듯하다. "
+        </p>
+
+        <p>
+        <br><b>러닝타임이 너무 길었지만</b><br>"오이디푸스의 얘기이기도 하면서 자식들이 죽은 어머니의 얘기를 들어주고 풀어나간다는 점에서 안티고네가 더욱 많이 생각났던 것 같습니다. 그렇지만 225분의 러닝타임은 정말 쉽지가 않았네요..ㅎㅎ. "
+        </p>
+
+        <p>
+        <br><b>영화를 본 사람들은…</b><br>"미니멀한 무대 세련되어 보이는, 마치 유행처럼 빈번한 미니멀 "
+        </p>
+    </div>
+
+    <hr style="margin-top:32px; opacity:0.3;">
+
+    <a href="index.html" style="
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 16px;
+    border-radius:10px;
+    background:rgba(255,255,255,0.65);
+    border:1px solid rgba(200,200,200,0.6);
+    text-decoration:none;
+    font-size:0.9rem;
+    color:#1f2a33;
+    transition:0.2s;
+    " class="sizeofword">
+    ← 메인으로 돌아가기
+    </a>
+  </section>
+
+
+</main>
+
+
+
