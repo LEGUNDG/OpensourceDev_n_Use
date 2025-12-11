@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>문화 생활과 소개</title>
+
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+
+<style>
+/* ===== 초기 설정 ===== */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:Pretendard, system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:linear-gradient(135deg,#e8f5ff,#ffffff);
+  color:#1f2933;
+  min-height:100vh;
+  line-height:1.7;
+}
+a{text-decoration:none;color:inherit;}
+
+/* ===== 헤더 ===== */
+header{
+  position:sticky;top:0;z-index:10;
+  padding:10px 32px;
+  display:flex;justify-content:space-between;align-items:center;
+  background:rgba(255,255,255,0.6);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,255,255,0.8);
+  box-shadow:0 6px 18px rgba(0,0,0,0.07);
+}
+.logo{
+  font-size:1.25rem;font-weight:700;
+}
+nav a{
+  margin-left:18px;
+  font-size:0.9rem;
+  opacity:0.85;
+}
+nav a:hover{opacity:1;}
+
+/* ===== 레이아웃 ===== */
+main{
+  max-width:1200px;
+  margin:32px auto;
+  padding:0 16px;
+  display:grid;
+  grid-template-columns:260px 1fr;
+  gap:24px;
+}
+
+/* ===== Glass Card ===== */
+.card{
+  width: 50;
+  background:rgba(255,255,255,0.65);
+  backdrop-filter:blur(16px);
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,0.9);
+  box-shadow:0 16px 38px rgba(0,0,0,0.09);
+  padding:20px;
+}
+
+/* ===== 좌우 영역 ===== */
+.sidebar{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.avatar{
+  width:160px;height:80px;
+  margin:auto;
+  border-radius:3%;
+  display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(90deg,#0e4a84,#0e0e4e);
+  font-weight:700;font-size:1.1rem;color:#fff;
+}
+
+.profile{text-align:center;margin-top:10px;}
+.profile p{font-size:0.9rem;color:#4b5563;margin-top:6px;}
+
+.sidebar h3{font-size:1rem;margin-bottom:8px;}
+.category-list{list-style:none;margin-top:6px;}
+.category-list li{
+  padding:8px 0;
+  font-size:0.95rem;
+  color:#374151;
+}
+
+.content{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+.placeholder-box{
+  height:240px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:0.95rem;
+  color:#6b7280;
+  border-radius:14px;
+  border:2px dashed rgba(160,160,160,0.35);
+}
+
+.category-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+.category-title{
+  text-align:center;
+  font-size:1rem;
+  font-weight:600;
+  margin-bottom:15px;
+}
+
+h1{font-size:1.5rem;margin-bottom:12px;margin-top:12px}
+h2{margin-top:12px;margin-bottom:12px;font-size:1.3rem;}
+.section{
+  background:rgba(255,255,255,0.7);
+  padding:18px;
+  border-radius:14px;
+  margin-top:12px;
+  border:1px solid rgba(230,230,230,0.8);
+}
+
+.sizeofword {
+  display:inline-block;margin-top:30px;
+  font-weight:600;
+}
+
+.poster2-img {
+    display: block;
+    width: 300px; 
+    height: 500px;   
+    object-fit: cover;
+    object-position: center;
+    border-radius:14px;
+}
+
+.poster3-img {
+    display: block;
+    width: 200px; 
+    height: 200px;   
+    object-fit: cover;
+    object-position: center;
+    border-radius:14px;
+}
+
+.gallery {
+    display: flex; 
+    gap: 50px;   
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">문화생활</div>
+  <nav>
+    <a href="#">메인</a>
+    <a href="#">영화</a>
+    <a href="#">연극</a>
+    <a href="#">뮤지컬</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- 왼쪽 프로필,카테고리 -->
+  <aside class="sidebar">
+    <section class="card">
+      <div class="avatar">HYU</div>
+      <div class="profile">
+        <p>문화생활 기록</p>
+        <p style="font-size:0.85rem;color:#8795a1;">(여기에 소개문구가 들어갈 예정)</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <a href="index.html">카테고리</a>
+      <ul class="category-list">
+        <li>🎬 영화 (Film)</li>
+        <a href="moviecategory.html">🎭 연극 (Play)</a>
+        <li>🎙 뮤지컬 (Musical)</li>
+      </ul>
+    </section>
+  </aside>
+
+  <!-- 오른쪽 메인 콘텐츠 -->
+  <section class="content">
+    <section class="card">
+      <p style="font-size:0.95rem;color:#4b5563;text-align:center;">
+        <h1>🎙 위키드 (Wicked)</h1>
+      </p>
+    </section>
+
+    <div class="section">
+        <h2>📌 작품 소개</h2>
+        <!-- 위키드 포스터 이미지 (원하는 이미지로 교체 가능) -->
+        <img src="wicked-poster.jpg" alt="뮤지컬 위키드 포스터" class="poster2-img">
+        <p>
+            <b>위키드(Wicked)</b>는 L. 프랭크 바움의 동화 『오즈의 마법사』를 바탕으로, 
+            “서쪽 마녀” 엘파바의 관점에서 이야기를 다시 쓴 동명 소설을 원작으로 한 브로드웨이 뮤지컬이다. 
+            2003년 뉴욕 브로드웨이에서 초연된 이후 전 세계 여러 도시에서 장기 공연을 이어가고 있으며, 
+            한국에서도 여러 차례 라이선스 및 내한 공연이 이루어졌다. 화려한 무대, 귀에 남는 넘버, 
+            선과 악의 이분법을 뒤흔드는 서사 덕분에 현대 뮤지컬을 대표하는 작품으로 평가받는다.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>📖 줄거리</h2>
+        <p>
+            초록 피부 때문에 어릴 때부터 따돌림을 받아 온 엘파바는 마법 학교 “쉬즈 대학”에 입학하며 
+            운명적으로 인기 많은 소녀 글린다를 만나게 된다. 처음에는 서로를 이해하지 못하지만, 
+            함께 지내며 조금씩 진짜 우정을 쌓아간다. 그러나 마법사와 오즈의 정치적 음모가 드러나면서 
+            엘파바는 자신이 믿어온 정의와 사회의 시선 사이에서 선택의 기로에 서게 된다. 
+            결국 권력에 맞서 싸우는 엘파바는 “사악한 마녀”로 낙인찍히고, 
+            글린다는 “좋은 마녀”로 추앙받는 상반된 길을 걷게 된다. 
+            작품은 둘의 관계를 통해 “누가 선이고, 누가 악인가?”라는 질문을 던지며 이야기를 이끌어간다.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>🎭 출연 배우 (예시)</h2>
+        <div class="gallery">
+            <div>
+                <img src="elphaba-actress.jpg" alt="엘파바 역 배우" class="poster3-img">
+                <div class="category-title">
+                    엘파바 역 ○○○ 배우
+                </div>
+            </div>
+
+            <div>
+                <img src="glinda-actress.jpg" alt="글린다 역 배우" class="poster3-img">
+                <div class="category-title">
+                    글린다 역 △△△ 배우
+                </div>
+            </div>
+
+            <div>
+                <img src="fiyero-actor.jpg" alt="피예로 역 배우" class="poster3-img">
+                <div class="category-title">
+                    피예로 역 □□□ 배우
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🎼 대표 넘버</h2>
+        <p>🎙 Defying Gravity</p>
+        <!-- 실제 영상으로 교체 시 VIDEO_ID 부분만 바꾸면 됨 -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID_DEFYING" 
+        title="Defying Gravity - Wicked" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <p><br>🎙 Popular</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID_POPULAR" 
+        title="Popular - Wicked" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <div class="section">
+        <h2>📝 감상평</h2>
+        <p>
+        <b>중력에 맞선 선택</b><br>
+        "Defying Gravity 장면에서 조명이 집중되고 엘파바가 올라가는 순간, 
+        단순히 마법이 아니라 한 인간의 결심이 시각적으로 폭발하는 느낌을 받았다. 
+        ‘사람들이 나를 어떻게 부르든, 나는 내가 옳다고 믿는 길을 가겠다’라는 메시지가 
+        그대로 전해져서 오래 기억에 남는 장면이었다."
+        </p>
+
+        <p>
+        <br><b>두 사람의 성장 서사</b><br>
+        "엘파바만 성장하는 줄 알았는데, 사실 글린다 역시 자신의 허영과 인기에서 벗어나 
+        진짜 책임과 선택을 배우는 인물이라는 점이 좋았다. 
+        처음에는 가벼운 코미디 같다가도, 후반부로 갈수록 두 사람의 우정이 갖는 무게가 커져서 
+        공연이 끝난 뒤에도 둘의 선택을 계속 떠올리게 된다."
+        </p>
+
+        <p>
+        <br><b>선악 구도가 아닌, 시선의 문제</b><br>
+        "어릴 때 봤던 『오즈의 마법사』와는 완전히 다른 이야기를 들은 느낌이다. 
+        같은 사건도 어디서, 누구의 입장에서 바라보는지에 따라 '영웅'과 '마녀'가 갈린다는 사실이 
+        꽤 섬뜩하게 다가왔다. 그래서인지 커튼 콜이 끝난 뒤에도 선과 악을 나누는 우리의 시선에 대해 
+        한 번 더 생각하게 만드는 공연이었다."
+        </p>
+    </div>
+
+    <hr style="margin-top:32px; opacity:0.3;">
+
+    <a href="index.html" style="
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 16px;
+    border-radius:10px;
+    background:rgba(255,255,255,0.65);
+    border:1px solid rgba(200,200,200,0.6);
+    text-decoration:none;
+    font-size:0.9rem;
+    color:#1f2a33;
+    transition:0.2s;
+    " class="sizeofword">
+    ← 메인으로 돌아가기
+    </a>
+  </section>
+
+</main>
+</body>
+</html>
