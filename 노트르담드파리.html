@@ -3,204 +3,230 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>문화 생활과 소개</title>
+<title>노트르담 드 파리 – 문화 생활 기록</title>
 
-<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+<link rel="stylesheet" as="style" crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
 
 <style>
-/* ===== 초기 설정 ===== */
 *{margin:0;padding:0;box-sizing:border-box;}
 body{
-  font-family:Pretendard, system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  background:linear-gradient(135deg,#e8f5ff,#ffffff);
-  color:#1f2933;
-  min-height:100vh;
+  font-family:Pretendard, system-ui,-apple-system,"Segoe UI",sans-serif;
+  background:#f1f2f4;
+  color:#111827;
   line-height:1.7;
+  min-height:100vh;
 }
 a{text-decoration:none;color:inherit;}
 
-/* ===== 헤더 ===== */
+/* ===== 공통 헤더 (메인 페이지와 톤 맞춤) ===== */
 header{
-  position:sticky;top:0;z-index:10;
-  padding:10px 32px;
-  display:flex;justify-content:space-between;align-items:center;
-  background:rgba(255,255,255,0.6);
-  backdrop-filter:blur(14px);
-  border-bottom:1px solid rgba(255,255,255,0.8);
-  box-shadow:0 6px 18px rgba(0,0,0,0.07);
+  padding:16px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
-.logo{
-  font-size:1.25rem;font-weight:700;
+header .logo{
+  font-size:1.1rem;
+  font-weight:700;
+  letter-spacing:0.18em;
 }
-nav a{
+header nav a{
   margin-left:18px;
   font-size:0.9rem;
-  opacity:0.85;
+  opacity:0.7;
+  text-decoration:none;
+  color:#111827;
 }
-nav a:hover{opacity:1;}
+header nav a:hover{
+  opacity:1;
+}
 
 /* ===== 레이아웃 ===== */
 main{
-  max-width:1200px;
-  margin:32px auto;
-  padding:0 16px;
-  display:grid;
-  grid-template-columns:260px 1fr;
+  max-width:1000px;
+  margin:0 auto 40px;
+  padding:0 16px 40px;
+}
+
+/* 바깥 껍데기 (메인 hero-shell 느낌) */
+.page-shell{
+  margin-top:20px;
+  border-radius:16px;
+  background:#e5e7eb;
+  box-shadow:0 16px 40px rgba(15,23,42,0.18);
+  padding:18px 14px 24px;
+}
+.page-inner{
+  position:relative;
+  border-radius:14px;
+  overflow:hidden;
+  background:linear-gradient(to bottom right, #f9fafb 0%, #e5e7eb 60%, #f3f4f6 100%);
+}
+
+/* 안쪽 콘텐츠 카드 */
+.page-content{
+  position:relative;
+  z-index:1;
+  padding:28px 32px 30px;
+}
+
+/* 상단 타이틀 + 포스터 정보 */
+.top-layout{
+  display:flex;
   gap:24px;
+  align-items:flex-start;
+  margin-bottom:24px;
+  flex-wrap:wrap;
 }
-
-/* ===== Glass Card ===== */
-.card{
-  width: 50;
-  background:rgba(255,255,255,0.65);
-  backdrop-filter:blur(16px);
-  border-radius:18px;
-  border:1px solid rgba(255,255,255,0.9);
-  box-shadow:0 16px 38px rgba(0,0,0,0.09);
-  padding:20px;
+.poster-wrap{
+  flex:0 0 260px;
 }
-
-/* ===== 좌우 영역 ===== */
-.sidebar{
-  display:flex;
-  flex-direction:column;
-  gap:20px;
+.poster-img{
+  display:block;
+  width:100%;
+  max-width:260px;
+  height:auto;
+  border-radius:14px;
+  object-fit:cover;
+  box-shadow:0 12px 26px rgba(15,23,42,0.28);
 }
-
-.avatar{
-  width:160px;height:80px;
-  margin:auto;
-  border-radius:3%;
-  display:flex;align-items:center;justify-content:center;
-  background:linear-gradient(90deg,#0e4a84,#0e0e4e);
-  font-weight:700;font-size:1.1rem;color:#fff;
+.top-text{
+  flex:1 1 0;
 }
-
-.profile{text-align:center;margin-top:10px;}
-.profile p{font-size:0.9rem;color:#4b5563;margin-top:6px;}
-
-.sidebar h3{font-size:1rem;margin-bottom:8px;}
-.category-list{list-style:none;margin-top:6px;}
-.category-list li{
-  padding:8px 0;
-  font-size:0.95rem;
-  color:#374151;
-}
-
-.content{
-  display:flex;
-  flex-direction:column;
-  gap:15px;
-}
-
-.placeholder-box{
-  height:240px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  font-size:0.95rem;
+.title-label{
+  font-size:0.85rem;
   color:#6b7280;
-  border-radius:14px;
-  border:2px dashed rgba(160,160,160,0.35);
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  margin-bottom:4px;
+}
+h1{
+  font-size:1.6rem;
+  font-weight:800;
+  margin-bottom:8px;
+}
+.subtitle{
+  font-size:0.92rem;
+  color:#4b5563;
 }
 
-.category-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:15px;
-}
-.category-title{
-  text-align:center;
-  font-size:1rem;
-  font-weight:600;
-  margin-bottom:15px;
-}
-
-h1{font-size:1.5rem;margin-bottom:12px;margin-top:12px}
-h2{margin-top:12px;margin-bottom:12px;font-size:1.3rem;}
+/* 섹션 카드 공통 */
 .section{
-  background:rgba(255,255,255,0.7);
-  padding:18px;
+  margin-top:18px;
+  background:#ffffff;
+  padding:18px 20px 20px;
   border-radius:14px;
-  margin-top:12px;
-  border:1px solid rgba(230,230,230,0.8);
+  border:1px solid #e5e7eb;
+  box-shadow:0 8px 20px rgba(15,23,42,0.08);
+}
+.section h2{
+  font-size:1.1rem;
+  margin-bottom:10px;
 }
 
-.sizeofword {
-  display:inline-block;margin-top:30px;
+/* 배우 갤러리 */
+.gallery{
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px;
+  margin-top:8px;
+}
+.poster3-img{
+  display:block;
+  width:160px;
+  height:160px;
+  object-fit:cover;
+  border-radius:12px;
+  box-shadow:0 10px 22px rgba(15,23,42,0.25);
+}
+.cast-name{
+  margin-top:6px;
+  font-size:0.9rem;
   font-weight:600;
+  text-align:center;
 }
 
-.poster2-img {
-    display: block;
-    width: 300px; 
-    height: 500px;   
-    object-fit: cover;
-    object-position: center;
-    border-radius:14px;
+/* 유튜브 iframe 반응형 컨테이너 */
+.video-wrap{
+  margin-top:8px;
+  margin-bottom:8px;
+}
+.video-wrap iframe{
+  max-width:100%;
 }
 
-.poster3-img {
-    display: block;
-    width: 200px; 
-    height: 200px;   
-    object-fit: cover;
-    object-position: center;
-    border-radius:14px;
+/* 뒤로가기 버튼 */
+.back-link{
+  display:inline-block;
+  margin-top:22px;
+  padding:10px 16px;
+  border-radius:10px;
+  background:#ffffff;
+  border:1px solid #e5e7eb;
+  font-size:0.9rem;
+  color:#1f2937;
+  box-shadow:0 6px 12px rgba(15,23,42,0.08);
+  transition:.15s;
+}
+.back-link:hover{
+  background:#fffbeb;
+  border-color:#fed7aa;
 }
 
-.gallery {
-    display: flex; 
-    gap: 50px;   
+/* 반응형 */
+@media (max-width:720px){
+  .page-content{
+    padding:22px 18px 24px;
+  }
+  .top-layout{
+    flex-direction:column;
+  }
+  .poster-wrap{
+    flex:none;
+    max-width:260px;
+  }
 }
 </style>
 </head>
 <body>
 <header>
-  <div class="logo">문화생활</div>
+  <div class="logo">CULTURE LOG</div>
   <nav>
-    <a href="#">메인</a>
-    <a href="#">영화</a>
-    <a href="#">연극</a>
-    <a href="#">뮤지컬</a>
+    <a href="index.html">HOME</a>
+    <a href="moviecategory.html">영화</a>
+    <a href="연극카테고리.html">연극</a>
+    <a href="뮤지컬카테고리.html">뮤지컬</a>
   </nav>
 </header>
 
 <main>
+  <section class="page-shell">
+    <div class="page-inner">
+      <div class="page-content">
 
-  <!-- 왼쪽 프로필,카테고리 -->
-  <aside class="sidebar">
-    <section class="card">
-      <div class="avatar">HYU</div>
-      <div class="profile">
-        <p>문화생활 기록</p>
-        <p style="font-size:0.85rem;color:#8795a1;">(여기에 소개문구가 들어갈 예정)</p>
-      </div>
-    </section>
+        <!-- 상단 타이틀 / 포스터 -->
+        <div class="top-layout">
+          <div class="poster-wrap">
+            <!-- 포스터 이미지는 실제 파일 경로로 교체 -->
+            <img src="notre-dame-poster.jpg"
+                 alt="뮤지컬 노트르담 드 파리 포스터"
+                 class="poster-img">
+          </div>
+          <div class="top-text">
+            <div class="title-label">뮤지컬 리뷰</div>
+            <h1>🎙 노트르담 드 파리 (Notre-Dame de Paris)</h1>
+            <p class="subtitle">
+              빅토르 위고의 소설을 프랑스 뮤지컬로 재탄생시킨 작품.  
+              거대한 성당과 록·샹송 스타일의 넘버가 어우러진 비극적 러브스토리.
+            </p>
+          </div>
+        </div>
 
-    <section class="card">
-      <a href="index.html">카테고리</a>
-      <ul class="category-list">
-        <li>🎬 영화 (Film)</li>
-        <a href="moviecategory.html">🎭 연극 (Play)</a>
-        <li>🎙 뮤지컬 (Musical)</li>
-      </ul>
-    </section>
-  </aside>
-
-  <!-- 오른쪽 메인 콘텐츠 -->
-  <section class="content">
-    <section class="card">
-      <p style="font-size:0.95rem;color:#4b5563;text-align:center;">
-        <h1>🎙 노트르담 드 파리 (Notre-Dame de Paris)</h1>
-      </p>
-    </section>
-
-    <div class="section">
-        <h2>📌 작품 소개</h2>
-        <!-- 포스터 이미지는 원하는 이미지 파일로 교체 가능 -->
-        <img src="notre-dame-poster.jpg" alt="뮤지컬 노트르담 드 파리 포스터" class="poster2-img">
-        <p>
+        <!-- 작품 소개 -->
+        <div class="section">
+          <h2>📌 작품 소개</h2>
+          <p>
             <b>노트르담 드 파리(Notre-Dame de Paris)</b>는 빅토르 위고의 동명 소설을 바탕으로 
             작사가 뤽 플라몽동(Luc Plamondon)과 작곡가 리샤르 코시아노(Richard Cocciante)가 만든 프랑스어 뮤지컬이다. 
             1998년 파리 팰레 데 콩그레에서 초연된 이후 프랑스와 캐나다, 이탈리아, 한국 등 
@@ -208,123 +234,122 @@ h2{margin-top:12px;margin-bottom:12px;font-size:1.3rem;}
             록과 샹송이 섞인 음악, 거대한 성당 세트를 활용한 무대, 
             그리고 <i>“Belle”</i>, <i>“Le Temps des Cathédrales”</i> 같은 명곡들로 
             프랑스 뮤지컬의 대표작으로 자리 잡았다.
-        </p>
-    </div>
+          </p>
+        </div>
 
-    <div class="section">
-        <h2>📖 줄거리</h2>
-        <p>
+        <!-- 줄거리 -->
+        <div class="section">
+          <h2>📖 줄거리</h2>
+          <p>
             배경은 15세기 파리, 노트르담 성당이다. 
             종지기 콰지모도는 기형적인 외모 때문에 사람들에게 괴물 취급을 받지만, 
             성당의 주교 프롤로에게 길러지며 성당 안에서만 살아온 인물이다. 
             어느 날 거리 축제에서 집시 무용수 에스메랄다를 본 순간, 
             콰지모도는 한 번도 느껴보지 못한 사랑의 감정을 품게 된다.
-        </p>
-        <p>
+          </p>
+          <p>
             그러나 에스메랄다를 향한 마음은 콰지모도만이 아니다. 
             프롤로 역시 금지된 욕망에 사로잡혀 그녀에게 집착하고, 
             근위대장 페뷔스는 약혼녀가 있으면서도 에스메랄다에게 끌린다. 
             세 남자의 뒤엉킨 사랑과 욕망, 그리고 집시들에 대한 차별과 폭력 속에서 
             에스메랄다는 점차 희생양이 되어 간다.
-        </p>
-        <p>
+          </p>
+          <p>
             무고한 에스메랄다가 마녀로 몰려 처형당할 위기에 처하자, 
             콰지모도는 그녀를 성당 안으로 구출하며 “보호권”을 외친다. 
             그러나 성당의 안전도 오래가지는 못하고, 
             결국 비극적인 결말로 이어지면서 작품은 사랑, 신앙, 권력, 
             그리고 ‘누가 진짜 괴물인가’라는 질문을 남긴 채 막을 내린다.
-        </p>
-    </div>
-
-    <div class="section">
-        <h2>🎭 출연 배우 (오리지널 프랑스 캐스트 예시)</h2>
-        <div class="gallery">
-            <div>
-                <img src="garou-quasimodo.jpg" alt="Garou - 콰지모도 역" class="poster3-img">
-                <div class="category-title">
-                    콰지모도 역 Garou
-                </div>
-            </div>
-
-            <div>
-                <img src="helene-segara-esmeralda.jpg" alt="Hélène Ségara - 에스메랄다 역" class="poster3-img">
-                <div class="category-title">
-                    에스메랄다 역 Hélène Ségara
-                </div>
-            </div>
-
-            <div>
-                <img src="daniel-lavoie-frollo.jpg" alt="Daniel Lavoie - 프롤로 역" class="poster3-img">
-                <div class="category-title">
-                    프롤로 역 Daniel Lavoie
-                </div>
-            </div>
+          </p>
         </div>
+
+        <!-- 출연 배우 -->
+        <div class="section">
+          <h2>🎭 출연 배우 (오리지널 프랑스 캐스트 예시)</h2>
+          <div class="gallery">
+            <div>
+              <img src="garou-quasimodo.jpg"
+                   alt="Garou - 콰지모도 역"
+                   class="poster3-img">
+              <div class="cast-name">콰지모도 역 Garou</div>
+            </div>
+
+            <div>
+              <img src="helene-segara-esmeralda.jpg"
+                   alt="Hélène Ségara - 에스메랄다 역"
+                   class="poster3-img">
+              <div class="cast-name">에스메랄다 역 Hélène Ségara</div>
+            </div>
+
+            <div>
+              <img src="daniel-lavoie-frollo.jpg"
+                   alt="Daniel Lavoie - 프롤로 역"
+                   class="poster3-img">
+              <div class="cast-name">프롤로 역 Daniel Lavoie</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 넘버 -->
+        <div class="section">
+          <h2>🎼 대표 넘버</h2>
+
+          <p>🎙 Belle</p>
+          <div class="video-wrap">
+            <iframe width="560" height="315"
+              src="https://www.youtube.com/embed/BQxZgvgbpC4"
+              title="Notre Dame de Paris - Belle [OFFICIAL MUSIC VIDEO]" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+
+          <p>🎙 Le Temps des Cathédrales</p>
+          <div class="video-wrap">
+            <iframe width="560" height="315"
+              src="https://www.youtube.com/embed/MNk_8qErO2c"
+              title="Notre Dame de Paris - Le Temps des Cathédrales" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <!-- 감상평 -->
+        <div class="section">
+          <h2>📝 감상평</h2>
+          <p>
+            <b>노래가 서사를 끌고 가는 뮤지컬</b><br>
+            대사가 거의 없이 넘버들로만 이야기가 전개되기 때문에, 
+            가사와 멜로디가 곧 인물의 심리와 서사라는 점이 인상적이다. 
+            <i>Belle</i> 한 곡 안에 세 남자의 욕망과 고뇌가 한꺼번에 폭발하는 장면을 보고 나면, 
+            왜 이 곡이 프랑스어권을 넘어 전 세계적으로 사랑받는지 알 것 같았다.
+          </p>
+
+          <p>
+            <br><b>성당이라는 거대한 무대, 그리고 인간의 욕망</b><br>
+            노트르담 성당 세트는 단순한 배경이 아니라 인물들을 압도하는 존재로 느껴진다. 
+            성당이 신의 집인지, 권력자의 성벽인지 모호해지는 순간마다 
+            인간의 욕망과 죄책감이 더 또렷하게 드러난다. 
+            특히 프롤로가 성당 안에서 부르는 곡들을 통해 
+            ‘신을 믿는 사람도 얼마든지 괴물이 될 수 있다’는 아이러니가 잘 드러난다.
+          </p>
+
+          <p>
+            <br><b>비극을 통해 남는 질문</b><br>
+            결말은 철저한 비극이지만, 그렇기 때문에 오히려 오래 남는다. 
+            누가 죄인이고, 누가 피해자인지 단순하게 나눌 수 없는 상황 속에서 
+            관객은 결국 ‘우리는 타인을 얼마나 쉽게 단정하고 있는가’라는 질문을 갖게 된다. 
+            화려한 군무와 상업적 볼거리보다, 비극이 던지는 여운을 즐기고 싶은 사람에게 추천하고 싶은 작품이다.
+          </p>
+        </div>
+
+        <!-- 메인으로 돌아가기 -->
+        <a href="index.html" class="back-link">
+          ← 메인으로 돌아가기
+        </a>
+
+      </div>
     </div>
-
-    <div class="section">
-        <h2>🎼 대표 넘버</h2>
-        <p>🎙 Belle</p>
-        <iframe width="560" height="315" 
-        src="https://www.youtube.com/embed/BQxZgvgbpC4" 
-        title="Notre Dame de Paris - Belle [OFFICIAL MUSIC VIDEO]" frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-        <p><br>🎙 Le Temps des Cathédrales</p>
-        <iframe width="560" height="315" 
-        src="https://www.youtube.com/embed/MNk_8qErO2c" 
-        title="Notre Dame de Paris - Le Temps des Cathédrales" frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-
-    <div class="section">
-        <h2>📝 감상평</h2>
-        <p>
-        <b>노래가 서사를 끌고 가는 뮤지컬</b><br>
-        대사가 거의 없이 넘버들로만 이야기가 전개되기 때문에, 
-        가사와 멜로디가 곧 인물의 심리와 서사라는 점이 인상적이다. 
-        <i>Belle</i> 한 곡 안에 세 남자의 욕망과 고뇌가 한꺼번에 폭발하는 장면을 보고 나면, 
-        왜 이 곡이 프랑스어권을 넘어 전 세계적으로 사랑받는지 알 것 같았다.
-        </p>
-
-        <p>
-        <br><b>성당이라는 거대한 무대, 그리고 인간의 욕망</b><br>
-        노트르담 성당 세트는 단순한 배경이 아니라 인물들을 압도하는 존재로 느껴진다. 
-        성당이 신의 집인지, 권력자의 성벽인지 모호해지는 순간마다 
-        인간의 욕망과 죄책감이 더 또렷하게 드러난다. 
-        특히 프롤로가 성당 안에서 부르는 곡들을 통해 
-        ‘신을 믿는 사람도 얼마든지 괴물이 될 수 있다’는 아이러니가 잘 드러난다.
-        </p>
-
-        <p>
-        <br><b>비극을 통해 남는 질문</b><br>
-        결말은 철저한 비극이지만, 그렇기 때문에 오히려 오래 남는다. 
-        누가 죄인이고, 누가 피해자인지 단순하게 나눌 수 없는 상황 속에서 
-        관객은 결국 ‘우리는 타인을 얼마나 쉽게 단정하고 있는가’라는 질문을 갖게 된다. 
-        화려한 군무와 상업적 볼거리보다, 비극이 던지는 여운을 즐기고 싶은 사람에게 추천하고 싶은 작품이다.
-        </p>
-    </div>
-
-    <hr style="margin-top:32px; opacity:0.3;">
-
-    <a href="index.html" style="
-    display:inline-block;
-    margin-top:20px;
-    padding:10px 16px;
-    border-radius:10px;
-    background:rgba(255,255,255,0.65);
-    border:1px solid rgba(200,200,200,0.6);
-    text-decoration:none;
-    font-size:0.9rem;
-    color:#1f2a33;
-    transition:0.2s;
-    " class="sizeofword">
-    ← 메인으로 돌아가기
-    </a>
   </section>
-
 </main>
 </body>
 </html>
