@@ -12,25 +12,25 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 body{
   font-family:Pretendard, system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  background:#f3f4f6;
-  color:#111827;
+  background:#020617; /* 전시관 어두운 전체 배경 */
+  color:#e5e7eb;
   min-height:100vh;
 }
 a{text-decoration:none;color:inherit;}
 
 /* ===== 헤더 ===== */
 header{
-  position:sticky;top:0;z-index:10;
+  position:sticky;top:0;z-index:20;
   padding:14px 32px;
   display:flex;justify-content:space-between;align-items:center;
-  background:#ffffff;
-  border-bottom:1px solid #e5e7eb;
-  box-shadow:0 4px 12px rgba(15,23,42,0.05);
+  background:rgba(3,7,18,0.96);
+  border-bottom:1px solid #1f2937;
+  box-shadow:0 12px 30px rgba(0,0,0,0.7);
 }
 .logo{
-  font-size:1.3rem;
+  font-size:1.2rem;
   font-weight:800;
-  letter-spacing:0.15em;
+  letter-spacing:0.2em;
 }
 nav a{
   margin-left:18px;
@@ -42,22 +42,41 @@ nav a:hover{
   color:#f97316;
 }
 
-/* ===== 레이아웃 ===== */
+/* ===== 레이아웃 (전시 벽 패널) ===== */
 main{
+  position:relative;
   max-width:1200px;
-  margin:32px auto 40px;
-  padding:0 16px 40px;
+  margin:40px auto 56px;
+  padding:32px 24px 40px;
   display:grid;
   grid-template-columns:260px 1fr;
   gap:24px;
+  z-index:1;
+}
+
+/* 전시관 벽 패널 배경 */
+main::before{
+  content:"";
+  position:absolute;
+  inset:-32px -40px;
+  border-radius:32px;
+  background:
+    radial-gradient(circle at 20% 0, rgba(254,249,195,0.35) 0, transparent 55%),
+    radial-gradient(circle at 80% 0, rgba(254,215,170,0.3) 0, transparent 55%),
+    linear-gradient(to bottom,#020617 0,#020617 60%,#020617 60%,#000000 100%);
+  border:1px solid #1f2937;
+  box-shadow:
+    0 0 40px rgba(0,0,0,0.9),
+    0 50px 120px rgba(0,0,0,1);
+  z-index:-1;
 }
 
 /* ===== 공통 카드 ===== */
 .card{
-  background:#ffffff;
+  background:#0b1120;
   border-radius:18px;
-  border:1px solid #e5e7eb;
-  box-shadow:0 14px 30px rgba(15,23,42,0.08);
+  border:1px solid #1f2937;
+  box-shadow:0 14px 30px rgba(0,0,0,0.8);
   padding:18px 18px 20px;
 }
 
@@ -74,7 +93,7 @@ main{
   border-radius:16px;
   display:flex;align-items:center;justify-content:center;
   background:#111827;
-  box-shadow:0 0 0 8px #111827, 0 18px 30px rgba(15,23,42,0.4);
+  box-shadow:0 0 0 8px #111827, 0 18px 30px rgba(0,0,0,0.9);
   position:relative;
   overflow:hidden;
 }
@@ -98,20 +117,20 @@ main{
 }
 
 .profile{text-align:center;margin-top:10px;}
-.profile p{font-size:0.9rem;color:#4b5563;margin-top:6px;}
+.profile p{font-size:0.9rem;color:#cbd5f5;margin-top:6px;}
 
 .sidebar h3{
-  font-size:0.95rem;
+  font-size:0.9rem;
   margin-bottom:10px;
   letter-spacing:0.08em;
   text-transform:uppercase;
-  color:#374151;
+  color:#e5e7eb;
 }
 .category-list{list-style:none;margin-top:4px;padding-left:0;}
 .category-list li{
   padding:6px 0;
   font-size:0.9rem;
-  color:#374151;
+  color:#e5e7eb;
 }
 .category-list a{
   display:block;
@@ -129,33 +148,33 @@ main{
   gap:20px;
 }
 
-/* ===== 스크린(노트북) 카드 ===== */
+/* ===== 스크린(전시 프레임) 섹션 ===== */
 .screen-card{
   position:relative;
-  padding:26px 22px 24px;
-  background:#e5e7eb;
+  padding:24px 20px 24px;
+  background:#020617;
   border-radius:22px;
-  box-shadow:0 18px 40px rgba(15,23,42,0.2);
+  box-shadow:0 18px 40px rgba(0,0,0,1);
 }
 .screen-inner{
-  background:#111827;
+  background:#020617;
   border-radius:14px;
   padding:22px 24px 26px;
   position:relative;
   overflow:hidden;
-  box-shadow:inset 0 0 0 4px #1f2937;
+  box-shadow:inset 0 0 0 3px #111827;
 }
 .screen-inner::before{
-  /* 위에서 내려오는 스포트라이트 */
+  /* 위에서 내려오는 큰 스포트라이트 */
   content:"";
   position:absolute;
-  top:-30%;
+  top:-35%;
   left:50%;
   transform:translateX(-50%);
-  width:200%;
-  height:140%;
-  background:radial-gradient(circle at 50% 0,#fef9c3 0,#facc15 16%,rgba(0,0,0,0.2) 45%,transparent 70%);
-  opacity:0.8;
+  width:260%;
+  height:160%;
+  background:radial-gradient(circle at 50% 0,#fef9c3 0,#facc15 20%,rgba(0,0,0,0.7) 55%,transparent 80%);
+  opacity:0.85;
 }
 .screen-frame{
   position:relative;
@@ -168,7 +187,7 @@ main{
     #b45309 6px,
     #b45309 10px
   );
-  box-shadow:0 12px 24px rgba(0,0,0,0.7);
+  box-shadow:0 16px 36px rgba(0,0,0,1);
 }
 .screen-content{
   background:#fefce8;
@@ -198,22 +217,21 @@ main{
   color:#6b7280;
 }
 
-/* ===== 노트북 하단 받침대 느낌 ===== */
 .screen-base{
   margin-top:12px;
   height:8px;
   border-radius:0 0 18px 18px;
-  background:linear-gradient(90deg,#111827,#020617);
+  background:linear-gradient(90deg,#020617,#000000);
 }
 
 /* ===== 최근 글 카드 – 액자 + 조명 ===== */
 .section-title{
-  font-size:0.95rem;
+  font-size:0.9rem;
   font-weight:700;
   margin-bottom:10px;
   letter-spacing:0.1em;
   text-transform:uppercase;
-  color:#374151;
+  color:#e5e7eb;
 }
 
 .post-grid{
@@ -225,35 +243,33 @@ main{
 .post-link{
   display:block;
   border-radius:18px;
-  background:transparent;
 }
 
 .post-card{
   position:relative;
   border-radius:16px;
   padding:14px 14px 16px;
-  background:#111827;
-  box-shadow:0 16px 30px rgba(15,23,42,0.7);
+  background:#020617;
+  box-shadow:0 16px 30px rgba(0,0,0,1);
   overflow:hidden;
 }
 .post-card::before{
-  /* 내려오는 스포트라이트 */
   content:"";
   position:absolute;
   top:-35%;
   left:50%;
   transform:translateX(-50%);
-  width:200%;
-  height:140%;
-  background:radial-gradient(circle at 50% 0,#fef9c3 0,#facc15 20%,rgba(0,0,0,0.4) 55%,transparent 75%);
-  opacity:0.85;
+  width:220%;
+  height:150%;
+  background:radial-gradient(circle at 50% 0,#fef9c3 0,#facc15 22%,rgba(0,0,0,0.7) 55%,transparent 80%);
+  opacity:0.9;
 }
 .post-inner{
   position:relative;
   border-radius:12px;
   padding:14px 14px 16px;
   background:linear-gradient(135deg,#7c2d12,#92400e);
-  box-shadow:0 10px 18px rgba(0,0,0,0.8);
+  box-shadow:0 12px 22px rgba(0,0,0,1);
 }
 .post-paper{
   background:#fffbeb;
@@ -292,14 +308,13 @@ main{
   font-weight:600;
 }
 
-/* hover 효과 – 카드 전체가 버튼처럼 */
 .post-link:hover .post-card{
   transform:translateY(-3px);
   transition:transform 0.15s ease, box-shadow 0.15s ease;
-  box-shadow:0 22px 40px rgba(15,23,42,0.8);
+  box-shadow:0 24px 46px rgba(0,0,0,1);
 }
 
-/* ===== 카테고리 섹션 – 작은 액자 리스트 ===== */
+/* ===== 카테고리 섹션 – 작은 액자들 ===== */
 .section-layout{
   display:grid;
   grid-template-columns:1fr 1fr 1fr;
@@ -311,7 +326,7 @@ main{
   font-size:0.95rem;
   font-weight:700;
   margin-bottom:10px;
-  color:#374151;
+  color:#e5e7eb;
 }
 
 .post-list{
@@ -322,7 +337,6 @@ main{
 .post-list li{
   margin-bottom:8px;
   font-size:0.9rem;
-  color:#374151;
 }
 .post-list a{
   position:relative;
@@ -333,6 +347,7 @@ main{
   background:#fefce8;
   border:1px solid #fbbf24;
   font-size:0.85rem;
+  color:#1f2937;
 }
 .post-list a::before{
   content:"●";
@@ -348,7 +363,7 @@ main{
   color:#b45309;
 }
 
-/* 영화 placeholder – 빈 액자 */
+/* 영화 placeholder – 아직 비어 있는 액자 */
 .placeholder-box{
   min-height:120px;
   display:flex;
@@ -356,11 +371,12 @@ main{
   justify-content:center;
   align-items:flex-start;
   font-size:0.9rem;
-  color:#4b5563;
+  color:#e5e7eb;
   border-radius:14px;
-  border:3px solid #e5e7eb;
+  border:3px solid #1f2937;
   padding:14px;
-  background:#fefce8;
+  background:#020617;
+  box-shadow:inset 0 0 0 2px #111827;
 }
 .placeholder-small{
   font-size:0.8rem;
@@ -391,7 +407,7 @@ main{
       </div>
       <div class="profile">
         <p style="font-weight:700;">오늘의 문화생활 기록장</p>
-        <p style="font-size:0.85rem;color:#4b5563;line-height:1.7;">
+        <p style="font-size:0.85rem;color:#cbd5f5;line-height:1.7;">
           공연장, 영화관, OTT, 무대와 스크린에서 만난 순간들을  
           액자 속 한 장면처럼 남겨두는 개인 문화 아카이브입니다.
         </p>
@@ -409,7 +425,7 @@ main{
 
     <section class="card">
       <h3>이 블로그는…</h3>
-      <p style="font-size:0.85rem;color:#4b5563;line-height:1.7;">
+      <p style="font-size:0.85rem;color:#e5e7eb;line-height:1.7;">
         평점보다 중요한 건 그날의 기분,  
         눈에 남은 장면, 귀에 남은 한 소절이라고 생각한다.  
         그래서 이곳에는 작품의 완벽한 분석보다는  
@@ -421,7 +437,7 @@ main{
   <!-- 오른쪽 메인 콘텐츠 -->
   <section class="content">
 
-    <!-- 스포트라이트 스크린 섹션 -->
+    <!-- 전시 메인 프레임 -->
     <section class="screen-card">
       <div class="screen-inner">
         <div class="screen-frame">
@@ -444,7 +460,7 @@ main{
       <div class="screen-base"></div>
     </section>
 
-    <!-- 최근 글 섹션 -->
+    <!-- 최근 작품들 -->
     <section class="card">
       <div class="section-title">
         최근에 다녀온 작품들
@@ -525,7 +541,7 @@ main{
       </div>
     </section>
 
-    <!-- 카테고리별 목록 섹션 -->
+    <!-- 카테고리별 액자들 -->
     <section class="card">
       <div class="section-title">
         장르별로 다시 보기
