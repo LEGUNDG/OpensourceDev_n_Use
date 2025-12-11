@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>문화 생활과 소개</title>
+<title>그을린사랑 – 문화 생활 기록</title>
 
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
 
@@ -11,150 +11,178 @@
 /* ===== 초기 설정 ===== */
 *{margin:0;padding:0;box-sizing:border-box;}
 body{
-  font-family:Pretendard, system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  background:linear-gradient(135deg,#e8f5ff,#ffffff);
-  color:#1f2933;
+  font-family:Pretendard, system-ui,-apple-system,"Segoe UI",sans-serif;
+  background:#f1f2f4;
+  color:#111827;
   min-height:100vh;
   line-height:1.7;
 }
 a{text-decoration:none;color:inherit;}
 
-/* ===== 헤더 ===== */
 header{
-  position:sticky;top:0;z-index:10;
-  padding:10px 32px;
-  display:flex;justify-content:space-between;align-items:center;
-  background:rgba(255,255,255,0.6);
-  backdrop-filter:blur(14px);
-  border-bottom:1px solid rgba(255,255,255,0.8);
-  box-shadow:0 6px 18px rgba(0,0,0,0.07);
+  padding:16px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
-.logo{
-  font-size:1.25rem;font-weight:700;
+header .logo{
+  font-size:1.1rem;
+  font-weight:700;
+  letter-spacing:0.18em;
 }
-nav a{
+header nav a{
   margin-left:18px;
   font-size:0.9rem;
-  opacity:0.85;
+  opacity:0.7;
+  text-decoration:none;
+  color:#111827;
 }
-nav a:hover{opacity:1;}
+header nav a:hover{
+  opacity:1;
+}
 
-/* ===== 레이아웃 ===== */
+
 main{
-  max-width:1200px;
-  margin:32px auto;
-  padding:0 16px;
-  display:grid;
-  grid-template-columns:260px 1fr;
-  gap:24px;
+  max-width:1000px;
+  margin:0 auto 40px;
+  padding:0 16px 40px;
 }
 
-/* ===== Glass Card ===== */
-.card{
-  width: 50;
-  background:rgba(255,255,255,0.65);
-  backdrop-filter:blur(16px);
-  border-radius:18px;
-  border:1px solid rgba(255,255,255,0.9);
-  box-shadow:0 16px 38px rgba(0,0,0,0.09);
-  padding:20px;
-  
+.page-shell{
+  margin-top:20px;
+  border-radius:16px;
+  background:#e5e7eb;
+  box-shadow:0 16px 40px rgba(15,23,42,0.18);
+  padding:18px 14px 24px;
 }
-
-/* ===== 좌우 영역 ===== */
-.sidebar{
-  display:flex;
-  flex-direction:column;
-  gap:20px;
-}
-
-.avatar{
-  width:160px;height:80px;
-  margin:auto;
-  border-radius:3%;
-  display:flex;align-items:center;justify-content:center;
-  background:linear-gradient(90deg,#0e4a84,#0e0e4e);
-  font-weight:700;font-size:1.1rem;color:#fff;
-}
-
-.profile{text-align:center;margin-top:10px;}
-.profile p{font-size:0.9rem;color:#4b5563;margin-top:6px;}
-
-.sidebar h3{font-size:1rem;margin-bottom:8px;}
-.category-list{list-style:none;margin-top:6px;}
-.category-list li{
-  padding:8px 0;
-  font-size:0.95rem;
-  color:#374151;
-}
-
-.content{
-  display:flex;
-  flex-direction:column;
-  gap:15px;
-}
-
-.placeholder-box{
-  height:240px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  font-size:0.95rem;
-  color:#6b7280;
+.page-inner{
+  position:relative;
   border-radius:14px;
-  border:2px dashed rgba(160,160,160,0.35);
+  overflow:hidden;
+  background:linear-gradient(to bottom right, #f9fafb 0%, #e5e7eb 60%, #f3f4f6 100%);
 }
 
-.category-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:15px;
+.page-content{
+  position:relative;
+  z-index:1;
+  padding:28px 32px 30px;
 }
-.category-title{
-  text-align:center;
-  font-size:1rem;
-  font-weight:600;
-  margin-bottom:15px;
+.top-layout{
+  display:flex;
+  gap:24px;
+  align-items:flex-start;
+  margin-bottom:24px;
+  flex-wrap:wrap;
+}
+.poster-wrap{
+  flex:0 0 260px;
+}
+.poster-img{
+  display:block;
+  width:100%;
+  max-width:260px;
+  height:auto;
+  border-radius:14px;
+  object-fit:cover;
+  box-shadow:0 12px 26px rgba(15,23,42,0.28);
+}
+.top-text{
+  flex:1 1 0;
+}
+.title-label{
+  font-size:0.85rem;
+  color:#6b7280;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  margin-bottom:4px;
 }
 
-h1{font-size:1.5rem;margin-bottom:12px;margin-top:12px}
-h2{margin-top:12px;margin-bottom:12px;font-size:1.3rem;}
+.subtitle{
+  font-size:0.92rem;
+  color:#4b5563;
+}
+
+
+h1{  font-size:1.6rem;
+  font-weight:800;
+  margin-bottom:8px}
+
 .section
  {
-  background:rgba(255,255,255,0.7);
-  padding:18px;
+  margin-top:18px;
+  background:#ffffff;
+  padding:18px 20px 20px;
   border-radius:14px;
-  margin-top:12px;
-  border:1px solid rgba(230,230,230,0.8);
+  border:1px solid #e5e7eb;
+  box-shadow:0 8px 20px rgba(15,23,42,0.08);
 }
 
-.sizeofword {
-  display:inline-block;margin-top:30px;
-  font-weight:600;
+.section h2{
+  font-size:1.1rem;
+  margin-bottom:10px;
 }
-
-.poster2-img {
-    display: block;
-    width: 300px; 
-    height: 500px;   
-    object-fit: cover;
-    object-position: center;
-    border-radius:14px;
-    }
 
 .poster3-img {
-    display: block;
-    width: 200px; 
-    height: 200px;   
-    object-fit: cover;
-    object-position: center;
-    border-radius:14px;
+  display:block;
+  width:160px;
+  height:160px;
+  object-fit:cover;
+  border-radius:12px;
+  box-shadow:0 10px 22px rgba(15,23,42,0.25);
     }
 
 .gallery {
-    display: flex; 
-    gap: 50px;   
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px;
+  margin-top:8px;  
     }
+
+.cast-name{
+  margin-top:6px;
+  font-size:0.9rem;
+  font-weight:600;
+  text-align:center;
+}
+
+.video-wrap{
+  margin-top:8px;
+  margin-bottom:8px;
+}
+.video-wrap iframe{
+  max-width:100%;
+}
+
+.back-link{
+  display:inline-block;
+  margin-top:22px;
+  padding:10px 16px;
+  border-radius:10px;
+  background:#ffffff;
+  border:1px solid #e5e7eb;
+  font-size:0.9rem;
+  color:#1f2937;
+  box-shadow:0 6px 12px rgba(15,23,42,0.08);
+  transition:.15s;
+}
+.back-link:hover{
+  background:#fffbeb;
+  border-color:#fed7aa;
+}
+
+/* 반응형 */
+@media (max-width:720px){
+  .page-content{
+    padding:22px 18px 24px;
+  }
+  .top-layout{
+    flex-direction:column;
+  }
+  .poster-wrap{
+    flex:none;
+    max-width:260px;
+  }
+}
 
 </style>
 </head>
@@ -171,114 +199,110 @@ h2{margin-top:12px;margin-bottom:12px;font-size:1.3rem;}
 
 <main>
 
-  <!-- 왼쪽 프로필,카테고리 -->
-  <aside class="sidebar">
-    <section class="card">
-      <div class="avatar">HYU</div>
-      <div class="profile">
-        <p>문화생활 기록</p>
-        <p style="font-size:0.85rem;color:#8795a1;">(여기에 소개문구가 들어갈 예정)</p>
-      </div>
-    </section>
+  <section class="page-shell">
+    <div class="page-inner">
+      <div class="page-content">
 
-    <section class="card">
-      <a href="index.html">카테고리</a>
-      <ul class="category-list">
-        <li>🎬 영화 (Film)</li>
-        <a href="moviecategory.html">🎭 연극 (Play)</a>
-        <li>🎙 뮤지컬 (Musical)</li>
-      </ul>
-    </section>
-  </aside>
+        <!-- 상단 타이틀 / 포스터 -->
+        <div class="top-layout">
+          <div class="poster-wrap">
+            <!-- 포스터 이미지는 실제 파일 경로로 교체 -->
+            <img src="https://ticketimage.interpark.com/Play/image/large/21/21002050_p.gif"
+                 alt="그을린 사랑 포스터"
+                 class="poster-img">
+          </div>
+          <div class="top-text">
+            <div class="title-label">연극 리뷰</div>
+            <h1>🎙 그을린 사랑</h1>
+            <p class="subtitle">
+             <b>레바논 출신의 작가 와즈디 무아와드가 쓴 현대 비극의 걸작</b> <br>니 빌뇌브 감독의 동명 영화로도 널리 알려져 있으며, 치밀한 구성과 충격적인 반전, 그리고 압도적인 묵직함으로 '신화적 비극'이라는 찬사를 받는 작품이다.
+            </p>
+          </div>
+        </div>
 
-  <!-- 오른쪽 메인 콘텐츠 -->
-  <section class="content">
-    <section class="card">
-      <p style="font-size:0.95rem;color:#4b5563;text-align:center;">
-        <h1>🎙 그을린사랑 (Incendies)</h1>
-      </p>
-    </section>
+        <!-- 작품 소개 -->
+        <div class="section">
+          <h2>📌 작품 소개</h2>
+          <p>
+            <b>그을린 사랑</b>은 피비린내 나는 내전의 역사와 관련된 어머니의 과거를 밝히기 위해 중동에 있는 어머니의 모국을 찾아가는 캐나다인 쌍둥이에 관한 내용을 담고 있다. 이들이 찾아간 나라의 이름은 언급되지 않지만, 영화의 사건들은 레바논 내전과 특히 수감자 소하 베차라의 이야기에서 많은 영향을 받았다. 영화는 대부분 몬트리올에서 촬영됐고, 요르단에서 며칠 촬영하기도 했다. 
+          </p>
+        </div>
 
-    <div class="section">
-        <h2>📌 작품 소개</h2>
-        <img src="https://i.namu.wiki/i/5JYXZnRDyXljffhUDkWJHKggbwML9VMVxoa4pY-oHndpsKe5U8411QIeJNQXilIfVCWTksusP_CdB7D8tthrB7Lw4ZKbDu3sCJWLbqHmE0l1aKtXYvg0ChpGg4mDXwJICz4EeZYfemQE9GeRMv1XgQ.webp" class="poster2-img">
-        <p>
-            <b> 그을린 사랑</b>는 2010년 공개된 캐나다의 미스터리 드라마 영화이며, 드니 빌뇌브가 감독과 각본을 맡았다. 2010년 9월에 베네치아와 토론토 국제 영화제에서 첫 공개됐고 2010년 9월 17일 퀘백에서 개봉했다. 캐나다와 퀘백, 전세계에서 비평적 극찬을 받았고 여러 상들을 수상했다. 2011년에는 아카데미 외국어 영화상 후보에 오르기도 했다. 지니상에서는 최우수 작품상을 포함해 8개 상을 수상했다.
-        </p>
-    </div>
+        <!-- 줄거리 -->
+        <div class="section">
+          <h2>📖 줄거리</h2>
+          <p>
+          오랫동안 침묵 속에 갇혀 살던 어머니 '나왈'이 세상을 떠난 후, 쌍둥이 남매 '잔느'와 '시몽'은 공증인으로부터 어머니의 기이한 유언을 전해 듣는다. 유언의 내용은 죽은 줄로만 알았던 아버지와, 존재조차 몰랐던 형을 찾아가 각각 편지를 전해달라는 것이다.
+          어머니의 과거를 전혀 알지 못했던 남매는 혼란스러워하지만, 결국 유언을 수행하기 위해 어머니의 고향인 중동으로 떠난다. 그곳에서 남매는 '노래하는 여인'이라 불렸던 어머니의 젊은 시절을 추적하며, 전쟁의 포화 속에서 그녀가 겪어야 했던 감옥 생활과 고문, 그리고 처절한 비극을 마주하게 된다.
+          수소문 끝에 남매는 마침내 전쟁이 낳은 끔찍하고도 슬픈 진실에 도달한다. 그것은 우리가 아는 수학 공식으로는 설명될 수 없는, "1 더하기 1은 1이 되는" 잔혹한 운명의 비밀이다. 모든 진실을 알게 된 남매는 어머니가 왜 평생 침묵을 지킬 수밖에 없었는지 깨닫게 되며, 비로소 어머니의 깊은 사랑과 화해하게 된다.
+          </p>
+        </div>
 
-    <div class="section">
-        <h2>📖 줄거리</h2>
-        <p>
-             피비린내 나는 내전의 역사와 관련된 어머니의 과거를 밝히기 위해 중동에 있는 어머니의 모국을 찾아가는 캐나다인 쌍둥이에 관한 내용을 담고 있다. 이들이 찾아간 나라의 이름은 언급되지 않지만, 영화의 사건들은 레바논 내전과 특히 수감자 소하 베차라의 이야기에서 많은 영향을 받았다. 영화는 대부분 몬트리올에서 촬영됐고, 요르단에서 며칠 촬영하기도 했다.
-        </p>
-    </div>
-
-    <div class="section">
-        <h2>🎭 출연 배우</h2>
-        <div class="gallery">
+        <!-- 출연 배우 -->
+        <div class="section">
+          <h2>🎭 출연 배우 </h2>
+          <div class="gallery">
             <div>
-                <img src="https://search.pstatic.net/common?type=b&size=3000&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2Fdc64eb62-ab10-4f7a-bb99-d9a93f9c20ef.png" class="poster3-img">
+                <img src="https://search.pstatic.net/common?type=b&size=3000&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2Fdc64eb62-ab10-4f7a-bb99-d9a93f9c20ef.png" 
+                alt="에르밀 르벨역 남명렬배우"
+                class="poster3-img">
                 <div class="category-title">
                 에르밀 르벨역 남명렬배우
                 </div>
             </div>
 
             <div>
-                <img src="https://search.pstatic.net/common?type=b&size=3000&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2F198%2F202005251154219491.png" class="poster3-img">
+                <img src="https://search.pstatic.net/common?type=b&size=3000&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2F198%2F202005251154219491.png" 
+                alt="나왈 마르완역 이주영배우"
+                class="poster3-img">
                 <div class="category-title">
                 나왈 마르완역 이주영배우
                 </div>
             </div>
 
             <div>
-                <img src="https://search.pstatic.net/common?type=b&size=3000&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2F180%2F201704281415074911.jpg" class="poster3-img">
+                <img src="https://search.pstatic.net/common?type=b&size=3000&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2F180%2F201704281415074911.jpg" 
+                alt="시몽역 이원석배우"
+                class="poster3-img">
                 <div class="category-title">
                 시몽역 이원석배우
                 </div>
-            </div>
         </div>
+
+        <div class="section">
+          <h2>🎼 대표 OST</h2>
+          <p>🎙 You And Whose Army?</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/QQnc-hM80UQ?si=vmWmX5WOvXHcsxjE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <p>
+          <br>🎙Radiohead - No Surprises</p>
+
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/u5CVsCnxyXg?si=bW82CUh9dvm5clc6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <!-- 감상평 -->
+        <div class="section">
+          <h2>📝 감상평</h2>
+          <p>
+            <b>화염</b><br>"워낙 유명한 영화를 먼저 접하고 공연으로 봤는데 간결한 무대와 배우들의 깔끔하고 깊이있는 연기가 좋았다. 전체적으로 지루한 느낌이 약간 있었지만 글이 주는 탄탄함이 있어서 좋은 공연임에는 틀림없는듯하다. "
+          </p>
+
+          <p>
+            <br><b>러닝타임이 너무 길었지만</b><br>"오이디푸스의 얘기이기도 하면서 자식들이 죽은 어머니의 얘기를 들어주고 풀어나간다는 점에서 안티고네가 더욱 많이 생각났던 것 같습니다. 그렇지만 225분의 러닝타임은 정말 쉽지가 않았네요..ㅎㅎ. "
+          </p>
+
+          <p>
+            <br><b>영화를 본 사람들은…</b><br>"미니멀한 무대 세련되어 보이는, 마치 유행처럼 빈번한 미니멀 "
+          </p>
+        </div>
+
+        <!-- 메인으로 돌아가기 -->
+        <a href="index.html" class="back-link">
+          ← 메인으로 돌아가기
+        </a>
+
+      </div>
     </div>
-
-    <div class="section">
-        <h2>🎼 대표 OST</h2>
-        <p>🎙 You And Whose Army?</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/QQnc-hM80UQ?si=vmWmX5WOvXHcsxjE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <p><br>🎙Radiohead - No Surprises</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/u5CVsCnxyXg?si=bW82CUh9dvm5clc6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-
-    <div class="section">
-        <h2>📝 감상평</h2>
-        <p>
-        <b>화염</b><br>"워낙 유명한 영화를 먼저 접하고 공연으로 봤는데 간결한 무대와 배우들의 깔끔하고 깊이있는 연기가 좋았다. 전체적으로 지루한 느낌이 약간 있었지만 글이 주는 탄탄함이 있어서 좋은 공연임에는 틀림없는듯하다. "
-        </p>
-
-        <p>
-        <br><b>러닝타임이 너무 길었지만</b><br>"오이디푸스의 얘기이기도 하면서 자식들이 죽은 어머니의 얘기를 들어주고 풀어나간다는 점에서 안티고네가 더욱 많이 생각났던 것 같습니다. 그렇지만 225분의 러닝타임은 정말 쉽지가 않았네요..ㅎㅎ. "
-        </p>
-
-        <p>
-        <br><b>영화를 본 사람들은…</b><br>"미니멀한 무대 세련되어 보이는, 마치 유행처럼 빈번한 미니멀 "
-        </p>
-    </div>
-
-    <hr style="margin-top:32px; opacity:0.3;">
-
-    <a href="index.html" style="
-    display:inline-block;
-    margin-top:20px;
-    padding:10px 16px;
-    border-radius:10px;
-    background:rgba(255,255,255,0.65);
-    border:1px solid rgba(200,200,200,0.6);
-    text-decoration:none;
-    font-size:0.9rem;
-    color:#1f2a33;
-    transition:0.2s;
-    " class="sizeofword">
-    ← 메인으로 돌아가기
-    </a>
   </section>
 
 

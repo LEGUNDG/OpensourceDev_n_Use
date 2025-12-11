@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title> 아마데우스 – 문화 생활 기록</title>
+
+<link rel="stylesheet" as="style" crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:Pretendard, system-ui,-apple-system,"Segoe UI",sans-serif;
+  background:#f1f2f4;
+  color:#111827;
+  line-height:1.7;
+  min-height:100vh;
+}
+a{text-decoration:none;color:inherit;}
+
+/* ===== 공통 헤더 (메인 페이지와 톤 맞춤) ===== */
+header{
+  padding:16px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+header .logo{
+  font-size:1.1rem;
+  font-weight:700;
+  letter-spacing:0.18em;
+}
+header nav a{
+  margin-left:18px;
+  font-size:0.9rem;
+  opacity:0.7;
+  text-decoration:none;
+  color:#111827;
+}
+header nav a:hover{
+  opacity:1;
+}
+
+/* ===== 레이아웃 ===== */
+main{
+  max-width:1000px;
+  margin:0 auto 40px;
+  padding:0 16px 40px;
+}
+
+/* 바깥 껍데기 (메인 hero-shell 느낌) */
+.page-shell{
+  margin-top:20px;
+  border-radius:16px;
+  background:#e5e7eb;
+  box-shadow:0 16px 40px rgba(15,23,42,0.18);
+  padding:18px 14px 24px;
+}
+.page-inner{
+  position:relative;
+  border-radius:14px;
+  overflow:hidden;
+  background:linear-gradient(to bottom right, #f9fafb 0%, #e5e7eb 60%, #f3f4f6 100%);
+}
+
+/* 안쪽 콘텐츠 카드 */
+.page-content{
+  position:relative;
+  z-index:1;
+  padding:28px 32px 30px;
+}
+
+/* 상단 타이틀 + 포스터 정보 */
+.top-layout{
+  display:flex;
+  gap:24px;
+  align-items:flex-start;
+  margin-bottom:24px;
+  flex-wrap:wrap;
+}
+.poster-wrap{
+  flex:0 0 260px;
+}
+.poster-img{
+  display:block;
+  width:100%;
+  max-width:260px;
+  height:auto;
+  border-radius:14px;
+  object-fit:cover;
+  box-shadow:0 12px 26px rgba(15,23,42,0.28);
+}
+.top-text{
+  flex:1 1 0;
+}
+.title-label{
+  font-size:0.85rem;
+  color:#6b7280;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  margin-bottom:4px;
+}
+h1{
+  font-size:1.6rem;
+  font-weight:800;
+  margin-bottom:8px;
+}
+.subtitle{
+  font-size:0.92rem;
+  color:#4b5563;
+}
+
+/* 섹션 카드 공통 */
+.section{
+  margin-top:18px;
+  background:#ffffff;
+  padding:18px 20px 20px;
+  border-radius:14px;
+  border:1px solid #e5e7eb;
+  box-shadow:0 8px 20px rgba(15,23,42,0.08);
+}
+.section h2{
+  font-size:1.1rem;
+  margin-bottom:10px;
+}
+
+/* 배우 갤러리 */
+.gallery{
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px;
+  margin-top:8px;
+}
+.poster3-img{
+  display:block;
+  width:160px;
+  height:160px;
+  object-fit:cover;
+  border-radius:12px;
+  box-shadow:0 10px 22px rgba(15,23,42,0.25);
+}
+.cast-name{
+  margin-top:6px;
+  font-size:0.9rem;
+  font-weight:600;
+  text-align:center;
+}
+
+/* 유튜브 iframe 반응형 컨테이너 */
+.video-wrap{
+  margin-top:8px;
+  margin-bottom:8px;
+}
+.video-wrap iframe{
+  max-width:100%;
+}
+
+/* 뒤로가기 버튼 */
+.back-link{
+  display:inline-block;
+  margin-top:22px;
+  padding:10px 16px;
+  border-radius:10px;
+  background:#ffffff;
+  border:1px solid #e5e7eb;
+  font-size:0.9rem;
+  color:#1f2937;
+  box-shadow:0 6px 12px rgba(15,23,42,0.08);
+  transition:.15s;
+}
+.back-link:hover{
+  background:#fffbeb;
+  border-color:#fed7aa;
+}
+
+/* 반응형 */
+@media (max-width:720px){
+  .page-content{
+    padding:22px 18px 24px;
+  }
+  .top-layout{
+    flex-direction:column;
+  }
+  .poster-wrap{
+    flex:none;
+    max-width:260px;
+  }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">CULTURE LOG</div>
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="#movie">영화</a>
+    <a href="#play">연극</a>
+    <a href="#musical">뮤지컬</a>
+  </nav>
+</header>
+
+<main>
+  <section class="page-shell">
+    <div class="page-inner">
+      <div class="page-content">
+
+        <!-- 상단 타이틀 / 포스터 -->
+        <div class="top-layout">
+          <div class="poster-wrap">
+            <img src="https://ticketimage.interpark.com/Play/image/large/22/22018039_p.gif"
+                 alt="아마데우스 포스터"
+                 class="poster-img">
+          </div>
+          <div class="top-text">
+            <div class="title-label">연극 리뷰</div>
+            <h1>🎙 아마데우스</h1>
+            <p class="subtitle">
+             <b>신을 향한 인간의 애증과 진정한 예술적 재능을 열망하는 예술가의 치밀한 심리묘사를 담아낸 심리극 </b><br>
+             영국의 유명 극작가 피터 쉐퍼의 1979년 동명의 희곡인 <아마데우스>로 만들어진 연극
+            </p>
+          </div>
+        </div>
+
+        <!-- 작품 소개 -->
+        <div class="section">
+          <h2>📌 작품 소개</h2>
+          <p>
+            <b>아마데우스</b>는 인간의 심리를 깊이있게 관조하며 <i>"번뇌하는 인간은 과연 신적 존재를 넘어설 수 있는가?" </i>하는 철학적인 질문을 던지는 작품이다. 극 중 살리에리는 모차르트를 만나 예술적 재능을 열망하며 신을 원망하고, 인간과 신과의 관계에 대해 다양한 생각과 감정을 표출한다.
+            피터 쉐퍼의 작품은 현대 사회의 정신적인 불모성으로 야기되는 신의 추구와, 정상 세계로 돌아가기 위하여 신을 파괴라는 일관된 주제를 그리고 있다. 인간에게는 자아를 억압하려는 성향과 또한 자아실현으로 이를 드러내려는 이원적 성향이 공존하고 있음을 보여주며, '두 세계관의 대립'을 그려내고 있다.
+            살리에리는 극을 이끌어가는 화자인 동시에 주인공으로 대사량 자체가 어마어마하며 10분제외 러닝타임 내내 등장해있어야한다. 배우들이 끝나고나면 힘들어서 기어다닌다고 말할정도의 연기 차력쇼를 보여준다. 살리에리의 회상, 기억의 파편들이 모아져 극의 스토리가 완성되는 만큼 과거와 현재를 오가는 살리에리 캐릭터가 극의 중심을 잡는다고 해도 과언이 아니다.
+          </p>
+        </div>
+
+        <!-- 줄거리 -->
+        <div class="section">
+          <h2>📖 줄거리</h2>
+          <p>
+            연극의 화자(話者)는 살리에리로 자신의 감정을 털어놓은 방식으로 이야기가 전개된다. 휠체어를 타고 등장한 늙은 살리에리, 모차르트를 찾아가 레퀴엠 작곡을 재촉하는 바람에 모차르트가 죽었다며 자신이 모차르트를 죽게 만들었다고 고백하면서 극이 시작된다.
+          </p>
+          <p>
+            무대의 조명이 환하게 켜지고 젊은 살리에리로 바뀐다. 살리에리의 인생에 '모차르트가 등장한 그 시점'으로 돌아가 있다. 살리에리는 각고의 노력으로 교회 지휘자 자리를 거쳐 음악가로서는 최고 공직인 '궁정악장'의 자리에 올라가 있다. 궁중에서 초청 음악가인 모차르트를 위해 환영 인사를 준비하는 살리에리. 하지만 기대와 전혀 다르게 콘스탄체와의 질 낮은 장난을 즐기는 모차르트를 보고 살리에리는 그를 경멸하게 된다. 하지만 연주가 시작되고 모차르트가 좀 전에 보여준 무례함과는 전혀 다른 아름다운 음악을 들려주자, 살리에리는 깜짝 놀라며 그가 가진 천재성에 감탄하게 된다.
+          </p>
+          <p>
+            살리에리가 미리 짜여있는 형식을 준수하고 음악적 주제 또한 하느님을 찬양하는 교회중심의 음악가였던 것에 반해, 모차르트는 신들린 연주력과 편곡 능력, 그리고 시대의 감성을 뛰어넘는 작곡 실력까지 갖춘 천재적 음악가였던 것. 하루하루 하느님께 감사를 드리고 불굴의 의지로 자신을 채찍질하는 수도자같은 삶을 살며 궁중악장이 된 살리에리에게 모차르트란 타고난 천재적 재능을 부여받은, 신의 사랑을 받는 부러운 존재로 다가온다. 결핍이 집착이 만들고 그로인해 번민이 시작된다.
+          </p>
+        </div>
+
+        <!-- 출연 배우 -->
+        <div class="section">
+          <h2>🎭 출연 배우 </h2>
+          <div class="gallery">
+            <div>
+              <img src="https://search.pstatic.net/common?type=b&size=3000&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2Fportrait%2F201807%2F20180726121118468.jpg"
+                   alt="안토니오 살리에리역 김재범배우"
+                   class="poster3-img">
+              <div class="cast-name">안토니오 살리에리역 김재범 배우</div>
+            </div>
+
+            <div>
+              <img src="https://search.pstatic.net/common?type=b&size=3000&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2Fportrait%2F202212%2F20221202172503911.jpg"
+                   alt="볼프강 아마데우스역 전성우배우"
+                   class="poster3-img">
+              <div class="cast-name">볼프강 아마데우스역 전성우배우</div>
+            </div>
+
+            <div>
+              <img src="https://search.pstatic.net/common?type=b&size=3000&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2Fb2df75a3-1acb-4e23-b0a9-d3614cfcd76b.jpg"
+                   alt="콘스탄체 베버역 김벼리배우"
+                   class="poster3-img">
+              <div class="cast-name">콘스탄체 베버역 김벼리배우</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>🎼 대표 OST</h2>
+
+          <p>🎙 W.A. MOZART: Symphony No. 25 in G minor, K. 183; 1st movement</p>
+          <div class="video-wrap">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8lTmdZ9GFFo?si=OIWOmPQaBnybYbZn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+
+          <p>🎙 Stabat Mater; Quando Corpus Morietur and Amen</p>
+          <div class="video-wrap">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/1B-t6_EwM_g?si=qnZx_3dALIbIpXtd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <!-- 감상평 -->
+        <div class="section">
+          <h2>📝 감상평</h2>
+          <p>
+            <b>차지연의 연기력에 기절~~</b><br>
+            살리에르역을 너무나도 멋지게 소화해주신 차지연배우님께 너무 감사드리고 막공 너무 수고하셨어요!! 모차르트도 너무 좋았구 바람들의 김우성배우도 나중엔 살리에르 역 맡으시면 너무 잘하실거 같아요!! 화이팅!!!! 성지순례가 되기를 평범하지 않은 평범한 남자 김우성 믓찌다
+          </p>
+
+          <p>
+            <br><b>이제부터 당신은 나의 적입니다</b><br>
+            모차르트를 질투한 살리에리의 삶에 온전히 집중할 수 있었던 공연
+            신에게 자신의 인생을 모두 바친 음악가가 신을 저주하게 되기까지 얼마나 괴롭고 비참했을지
+          </p>
+
+          <p>
+            <br><b>평범함이 재능을 질투하면</b><br>
+            이번 극을 통해 살리에리에 대해 약간이나마 알게 되었네요. 평범함과 신이 내린 재능 사이에서 일어나는 질투에 대한 이야기. 재밌었습니다. 차살리의 미친듯한 연기가 너무 좋았습니다. 더불어 극 제목이 아마데우스 인거까지 살리에리는 한번이라도 1등이나 주인공이 되지 못하는 것 같아서 안타까웠네요.
+          </p>
+        </div>
+
+        <!-- 메인으로 돌아가기 -->
+        <a href="index.html" class="back-link">
+          ← 메인으로 돌아가기
+        </a>
+
+      </div>
+    </div>
+  </section>
+</main>
+</body>
+</html>
