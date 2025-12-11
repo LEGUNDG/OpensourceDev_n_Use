@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>문화 생활과 소개</title>
+
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+
+<style>
+/* ===== 초기 설정 ===== */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:Pretendard, system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:linear-gradient(135deg,#e8f5ff,#ffffff);
+  color:#1f2933;
+  min-height:100vh;
+  line-height:1.7;
+}
+a{text-decoration:none;color:inherit;}
+
+/* ===== 헤더 ===== */
+header{
+  position:sticky;top:0;z-index:10;
+  padding:10px 32px;
+  display:flex;justify-content:space-between;align-items:center;
+  background:rgba(255,255,255,0.6);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,255,255,0.8);
+  box-shadow:0 6px 18px rgba(0,0,0,0.07);
+}
+.logo{
+  font-size:1.25rem;font-weight:700;
+}
+nav a{
+  margin-left:18px;
+  font-size:0.9rem;
+  opacity:0.85;
+}
+nav a:hover{opacity:1;}
+
+/* ===== 레이아웃 ===== */
+main{
+  max-width:1200px;
+  margin:32px auto;
+  padding:0 16px;
+  display:grid;
+  grid-template-columns:260px 1fr;
+  gap:24px;
+}
+
+/* ===== Glass Card ===== */
+.card{
+  width: 50;
+  background:rgba(255,255,255,0.65);
+  backdrop-filter:blur(16px);
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,0.9);
+  box-shadow:0 16px 38px rgba(0,0,0,0.09);
+  padding:20px;
+}
+
+/* ===== 좌우 영역 ===== */
+.sidebar{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.avatar{
+  width:160px;height:80px;
+  margin:auto;
+  border-radius:3%;
+  display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(90deg,#0e4a84,#0e0e4e);
+  font-weight:700;font-size:1.1rem;color:#fff;
+}
+
+.profile{text-align:center;margin-top:10px;}
+.profile p{font-size:0.9rem;color:#4b5563;margin-top:6px;}
+
+.sidebar h3{font-size:1rem;margin-bottom:8px;}
+.category-list{list-style:none;margin-top:6px;}
+.category-list li{
+  padding:8px 0;
+  font-size:0.95rem;
+  color:#374151;
+}
+
+.content{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+.placeholder-box{
+  height:240px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:0.95rem;
+  color:#6b7280;
+  border-radius:14px;
+  border:2px dashed rgba(160,160,160,0.35);
+}
+
+.category-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+.category-title{
+  text-align:center;
+  font-size:1rem;
+  font-weight:600;
+  margin-bottom:15px;
+}
+
+h1{font-size:1.5rem;margin-bottom:12px;margin-top:12px}
+h2{margin-top:12px;margin-bottom:12px;font-size:1.3rem;}
+.section{
+  background:rgba(255,255,255,0.7);
+  padding:18px;
+  border-radius:14px;
+  margin-top:12px;
+  border:1px solid rgba(230,230,230,0.8);
+}
+
+.sizeofword {
+  display:inline-block;margin-top:30px;
+  font-weight:600;
+}
+
+.poster2-img {
+    display: block;
+    width: 300px; 
+    height: 500px;   
+    object-fit: cover;
+    object-position: center;
+    border-radius:14px;
+}
+
+.poster3-img {
+    display: block;
+    width: 200px; 
+    height: 200px;   
+    object-fit: cover;
+    object-position: center;
+    border-radius:14px;
+}
+
+.gallery {
+    display: flex; 
+    gap: 50px;   
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">문화생활</div>
+  <nav>
+    <a href="#">메인</a>
+    <a href="#">영화</a>
+    <a href="#">연극</a>
+    <a href="#">뮤지컬</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- 왼쪽 프로필,카테고리 -->
+  <aside class="sidebar">
+    <section class="card">
+      <div class="avatar">HYU</div>
+      <div class="profile">
+        <p>문화생활 기록</p>
+        <p style="font-size:0.85rem;color:#8795a1;">(여기에 소개문구가 들어갈 예정)</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <a href="index.html">카테고리</a>
+      <ul class="category-list">
+        <li>🎬 영화 (Film)</li>
+        <a href="moviecategory.html">🎭 연극 (Play)</a>
+        <li>🎙 뮤지컬 (Musical)</li>
+      </ul>
+    </section>
+  </aside>
+
+  <!-- 오른쪽 메인 콘텐츠 -->
+  <section class="content">
+    <section class="card">
+      <p style="font-size:0.95rem;color:#4b5563;text-align:center;">
+        <h1>🎙 빌리 엘리어트 (Billy Elliot The Musical)</h1>
+      </p>
+    </section>
+
+    <div class="section">
+        <h2>📌 작품 소개</h2>
+        <!-- 포스터 이미지는 원하는 이미지 파일로 교체 가능 -->
+        <img src="billy-elliot-poster.jpg" alt="뮤지컬 빌리 엘리어트 포스터" class="poster2-img">
+        <p>
+            <b>빌리 엘리어트(Billy Elliot The Musical)</b>는 2000년 동명 영화를 원작으로 한 뮤지컬로, 
+            음악은 엘튼 존(Elton John), 대본과 가사는 리 홀(Lee Hall)이 맡았다. 
+            1984~85년 영국 광부 파업을 배경으로, 발레를 통해 자신의 길을 찾아가는 소년 빌리의 성장 이야기를 그린다. 
+            2005년 런던 웨스트엔드 빅토리아 팰리스 극장에서 초연되어 
+            올리비에상과 토니상 ‘최우수 뮤지컬’ 등을 수상하며 비평·흥행 양면에서 높은 평가를 받았다.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>📖 줄거리</h2>
+        <p>
+            영국 북부 광산 마을에 사는 11살 소년 빌리는 아버지와 형이 모두 광부인 집안에서 자란다. 
+            집에서는 복싱을 배우길 원하지만, 우연히 체육관 옆에서 열리는 발레 수업을 보게 되고 
+            그 순간 몸이 자연스럽게 음악에 반응한다. 
+            빌리는 발레 선생님인 윌킨슨에게 재능을 인정받고, 몰래 발레 수업을 이어 가게 된다.
+        </p>
+        <p>
+            한편 마을은 광부 파업으로 혼란스럽고, 빌리의 가족 역시 생계와 자존심 사이에서 버티고 있다. 
+            남자아이가 발레를 한다는 사실은 주변 사람들의 편견과 비웃음을 부르고, 
+            아버지와 형은 분노와 당혹감 속에서 빌리의 선택을 이해하지 못한다. 
+            하지만 빌리의 진심 어린 춤과 열정을 지켜보며, 
+            가족은 조금씩 그의 꿈을 지지할지, 아니면 현실을 선택할지 갈림길에 서게 된다.
+        </p>
+        <p>
+            결국 빌리는 로열 발레 학교 오디션을 보러 런던으로 가게 되고, 
+            파업으로 지친 마을 사람들의 응원과 가족의 희생 속에서 자신의 가능성을 시험받는다. 
+            작품은 춤을 통해 계급의 벽을 넘어서는 한 소년의 성장과, 
+            남겨진 사람들의 상처와 연대까지 담담하게 비춘다.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>🎭 출연 배우 (오리지널 런던 캐스트 예시)</h2>
+        <div class="gallery">
+            <div>
+                <img src="liam-mower-billy.jpg" alt="Liam Mower - 빌리 역" class="poster3-img">
+                <div class="category-title">
+                    빌리 엘리어트 역 Liam Mower
+                </div>
+            </div>
+
+            <div>
+                <img src="haydn-gwynne-mrswilkinson.jpg" alt="Haydn Gwynne - 윌킨슨 선생 역" class="poster3-img">
+                <div class="category-title">
+                    윌킨슨 선생 역 Haydn Gwynne
+                </div>
+            </div>
+
+            <div>
+                <img src="tim-healy-dad.jpg" alt="Tim Healy - 아버지 역" class="poster3-img">
+                <div class="category-title">
+                    아버지 Jackie Elliot 역 Tim Healy
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🎼 대표 넘버</h2>
+        <p>🎙 Electricity</p>
+        <iframe width="560" height="315" 
+        src="https://www.youtube.com/embed/dlbA93OCobs" 
+        title="Electricity | Billy Elliot The Musical Live" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <p><br>🎙 The Stars Look Down</p>
+        <iframe width="560" height="315" 
+        src="https://www.youtube.com/embed/QxIDKyjBGyk" 
+        title="Billy Elliot Original Cast - The Stars Look Down" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <div class="section">
+        <h2>📝 감상평</h2>
+        <p>
+        <b>“Electricity” 한 곡에 담긴 모든 것</b><br>
+        빌리가 오디션에서 부르는 <i>Electricity</i>는 
+        ‘춤을 출 때 어떤 기분이냐’는 질문에 대한 가장 솔직한 대답처럼 느껴진다. 
+        가사와 안무, 음악이 동시에 폭발하면서, 
+        빌리가 왜 이 모든 비난과 현실을 감수하면서까지 춤을 선택하는지 설득력 있게 보여준다.
+        </p>
+
+        <p>
+        <br><b>연대와 갈등이 뒤섞인 무대</b><br>
+        <i>The Stars Look Down</i>이나 <i>Solidarity</i> 같은 넘버에서는 
+        파업 현장의 분노와 절망, 그리고 그 속에서 살아가는 사람들의 연대가 동시에 드러난다. 
+        발레 수업 장면과 경찰·광부의 충돌 장면이 교차 편집되듯이 얽혀 있어서, 
+        예술과 현실이 얼마나 밀착되어 있는지를 강하게 체감하게 된다.
+        </p>
+
+        <p>
+        <br><b>계급과 꿈을 동시에 다루는 성장 서사</b><br>
+        빌리 엘리어트는 단순히 ‘재능 있는 소년의 성공기’가 아니라, 
+        계급과 노동, 가족의 상실과 화해를 함께 다루는 성장 서사다. 
+        빌리가 무대를 향해 떠나는 순간 남겨진 사람들의 삶도 계속된다는 점을 명확히 보여주기 때문에, 
+        해피엔딩이면서도 씁쓸한 여운이 남는다. 
+        꿈에 대한 이야기와 사회적 맥락을 함께 다루고 싶을 때 좋은 선택지인 작품이다.
+        </p>
+    </div>
+
+    <hr style="margin-top:32px; opacity:0.3;">
+
+    <a href="index.html" style="
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 16px;
+    border-radius:10px;
+    background:rgba(255,255,255,0.65);
+    border:1px solid rgba(200,200,200,0.6);
+    text-decoration:none;
+    font-size:0.9rem;
+    color:#1f2a33;
+    transition:0.2s;
+    " class="sizeofword">
+    ← 메인으로 돌아가기
+    </a>
+  </section>
+
+</main>
+</body>
+</html>
