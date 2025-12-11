@@ -12,8 +12,8 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 body{
   font-family:Pretendard, system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  background:linear-gradient(135deg,#e8f5ff,#ffffff);
-  color:#1f2933;
+  background:#f3f4f6;
+  color:#111827;
   min-height:100vh;
 }
 a{text-decoration:none;color:inherit;}
@@ -21,44 +21,47 @@ a{text-decoration:none;color:inherit;}
 /* ===== 헤더 ===== */
 header{
   position:sticky;top:0;z-index:10;
-  padding:16px 32px;
+  padding:14px 32px;
   display:flex;justify-content:space-between;align-items:center;
-  background:rgba(255,255,255,0.6);
-  backdrop-filter:blur(14px);
-  border-bottom:1px solid rgba(255,255,255,0.8);
-  box-shadow:0 6px 18px rgba(0,0,0,0.07);
+  background:#ffffff;
+  border-bottom:1px solid #e5e7eb;
+  box-shadow:0 4px 12px rgba(15,23,42,0.05);
 }
 .logo{
-  font-size:1.25rem;font-weight:700;
+  font-size:1.3rem;
+  font-weight:800;
+  letter-spacing:0.15em;
 }
 nav a{
   margin-left:18px;
   font-size:0.9rem;
-  opacity:0.85;
+  opacity:0.8;
 }
-nav a:hover{opacity:1;}
+nav a:hover{
+  opacity:1;
+  color:#f97316;
+}
 
 /* ===== 레이아웃 ===== */
 main{
   max-width:1200px;
-  margin:32px auto;
-  padding:0 16px;
+  margin:32px auto 40px;
+  padding:0 16px 40px;
   display:grid;
   grid-template-columns:260px 1fr;
   gap:24px;
 }
 
-/* ===== Glass Card ===== */
+/* ===== 공통 카드 ===== */
 .card{
-  background:rgba(255,255,255,0.65);
-  backdrop-filter:blur(16px);
+  background:#ffffff;
   border-radius:18px;
-  border:1px solid rgba(255,255,255,0.9);
-  box-shadow:0 16px 38px rgba(0,0,0,0.09);
-  padding:20px;
+  border:1px solid #e5e7eb;
+  box-shadow:0 14px 30px rgba(15,23,42,0.08);
+  padding:18px 18px 20px;
 }
 
-/* ===== 좌우 영역 ===== */
+/* ===== 좌측 사이드바 ===== */
 .sidebar{
   display:flex;
   flex-direction:column;
@@ -66,147 +69,502 @@ main{
 }
 
 .avatar{
-  width:160px;height:80px;
+  width:180px;height:90px;
   margin:auto;
-  border-radius:3%;
+  border-radius:16px;
   display:flex;align-items:center;justify-content:center;
-  background:linear-gradient(90deg,#0e4a84,#0e0e4e);
-  font-weight:700;font-size:1.1rem;color:#fff;
+  background:#111827;
+  box-shadow:0 0 0 8px #111827, 0 18px 30px rgba(15,23,42,0.4);
+  position:relative;
+  overflow:hidden;
+}
+.avatar::before{
+  content:"";
+  position:absolute;
+  top:-40%;
+  left:50%;
+  transform:translateX(-50%);
+  width:220%;
+  height:120%;
+  background:radial-gradient(circle at 50% 0,#fef08a 0,#fefce8 18%,transparent 60%);
+  opacity:0.9;
+}
+.avatar span{
+  position:relative;
+  font-weight:800;
+  font-size:1.05rem;
+  color:#111827;
+  letter-spacing:0.18em;
 }
 
 .profile{text-align:center;margin-top:10px;}
 .profile p{font-size:0.9rem;color:#4b5563;margin-top:6px;}
 
-.sidebar h3{font-size:1rem;margin-bottom:8px;}
-.category-list{list-style:none;margin-top:6px;}
-.category-list li{
-  padding:8px 0;
+.sidebar h3{
   font-size:0.95rem;
+  margin-bottom:10px;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
   color:#374151;
 }
+.category-list{list-style:none;margin-top:4px;padding-left:0;}
+.category-list li{
+  padding:6px 0;
+  font-size:0.9rem;
+  color:#374151;
+}
+.category-list a{
+  display:block;
+  padding:6px 0;
+  font-size:0.9rem;
+}
+.category-list a:hover{
+  color:#f97316;
+}
 
+/* ===== 메인 콘텐츠 공통 ===== */
 .content{
   display:flex;
   flex-direction:column;
-  gap:15px;
+  gap:20px;
 }
 
-.placeholder-box{
-  height:240px;
+/* ===== 스크린(노트북) 카드 ===== */
+.screen-card{
+  position:relative;
+  padding:26px 22px 24px;
+  background:#e5e7eb;
+  border-radius:22px;
+  box-shadow:0 18px 40px rgba(15,23,42,0.2);
+}
+.screen-inner{
+  background:#111827;
+  border-radius:14px;
+  padding:22px 24px 26px;
+  position:relative;
+  overflow:hidden;
+  box-shadow:inset 0 0 0 4px #1f2937;
+}
+.screen-inner::before{
+  /* 위에서 내려오는 스포트라이트 */
+  content:"";
+  position:absolute;
+  top:-30%;
+  left:50%;
+  transform:translateX(-50%);
+  width:200%;
+  height:140%;
+  background:radial-gradient(circle at 50% 0,#fef9c3 0,#facc15 16%,rgba(0,0,0,0.2) 45%,transparent 70%);
+  opacity:0.8;
+}
+.screen-frame{
+  position:relative;
+  border-radius:12px;
+  padding:18px 20px;
+  background:repeating-linear-gradient(
+    45deg,
+    #7c2d12 0,
+    #7c2d12 6px,
+    #b45309 6px,
+    #b45309 10px
+  );
+  box-shadow:0 12px 24px rgba(0,0,0,0.7);
+}
+.screen-content{
+  background:#fefce8;
+  border-radius:8px;
+  padding:16px 18px 18px;
+  text-align:center;
+}
+.hero-title{
+  font-size:1.35rem;
+  font-weight:800;
+  color:#1f2937;
+  margin-bottom:6px;
+}
+.hero-subtitle{
+  font-size:0.92rem;
+  color:#4b5563;
+  margin-top:4px;
+  line-height:1.6;
+}
+.hero-meta{
+  margin-top:10px;
   display:flex;
   justify-content:center;
-  align-items:center;
-  font-size:0.95rem;
+  flex-wrap:wrap;
+  gap:8px;
+  font-size:0.8rem;
   color:#6b7280;
-  border-radius:14px;
-  border:2px dashed rgba(160,160,160,0.35);
 }
 
-.category-grid{
+/* ===== 노트북 하단 받침대 느낌 ===== */
+.screen-base{
+  margin-top:12px;
+  height:8px;
+  border-radius:0 0 18px 18px;
+  background:linear-gradient(90deg,#111827,#020617);
+}
+
+/* ===== 최근 글 카드 – 액자 + 조명 ===== */
+.section-title{
+  font-size:0.95rem;
+  font-weight:700;
+  margin-bottom:10px;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color:#374151;
+}
+
+.post-grid{
   display:grid;
-  grid-template-columns:1.4fr 1fr 1fr;
-  gap:15px;
-  align-items: start;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:16px;
 }
-.category-title{
-  text-align:center;
-  font-size:1rem;
+
+.post-link{
+  display:block;
+  border-radius:18px;
+  background:transparent;
+}
+
+.post-card{
+  position:relative;
+  border-radius:16px;
+  padding:14px 14px 16px;
+  background:#111827;
+  box-shadow:0 16px 30px rgba(15,23,42,0.7);
+  overflow:hidden;
+}
+.post-card::before{
+  /* 내려오는 스포트라이트 */
+  content:"";
+  position:absolute;
+  top:-35%;
+  left:50%;
+  transform:translateX(-50%);
+  width:200%;
+  height:140%;
+  background:radial-gradient(circle at 50% 0,#fef9c3 0,#facc15 20%,rgba(0,0,0,0.4) 55%,transparent 75%);
+  opacity:0.85;
+}
+.post-inner{
+  position:relative;
+  border-radius:12px;
+  padding:14px 14px 16px;
+  background:linear-gradient(135deg,#7c2d12,#92400e);
+  box-shadow:0 10px 18px rgba(0,0,0,0.8);
+}
+.post-paper{
+  background:#fffbeb;
+  border-radius:8px;
+  padding:10px 11px 12px;
+}
+
+.post-category{
+  font-size:0.72rem;
   font-weight:600;
-  margin-bottom:15px;
+  color:#b45309;
+  margin-bottom:3px;
+  text-transform:uppercase;
+  letter-spacing:0.12em;
 }
-.post-list {
-  list-style: disc inside;
-  padding-left: 8px;
-  margin: 0;
+.post-title{
+  font-size:0.98rem;
+  font-weight:700;
+  color:#1f2937;
+  margin-bottom:5px;
+}
+.post-meta{
+  font-size:0.75rem;
+  color:#6b7280;
+  margin-bottom:6px;
+}
+.post-excerpt{
+  font-size:0.85rem;
+  color:#4b5563;
+  line-height:1.5;
+  margin-bottom:6px;
+}
+.post-more{
+  font-size:0.8rem;
+  color:#b45309;
+  font-weight:600;
 }
 
-.post-list li {
-  margin-bottom: 10px;
-  font-size: 0.95rem;
-  color: #374151;
-  line-height: 1.5;
+/* hover 효과 – 카드 전체가 버튼처럼 */
+.post-link:hover .post-card{
+  transform:translateY(-3px);
+  transition:transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow:0 22px 40px rgba(15,23,42,0.8);
 }
 
-.post-list li a:hover {
-  text-decoration: underline;
-  color: #0e4a84;
+/* ===== 카테고리 섹션 – 작은 액자 리스트 ===== */
+.section-layout{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:16px;
+  align-items:flex-start;
 }
 
+.section-layout .category-title{
+  font-size:0.95rem;
+  font-weight:700;
+  margin-bottom:10px;
+  color:#374151;
+}
+
+.post-list{
+  list-style:none;
+  padding-left:0;
+  margin:0;
+}
+.post-list li{
+  margin-bottom:8px;
+  font-size:0.9rem;
+  color:#374151;
+}
+.post-list a{
+  position:relative;
+  display:inline-block;
+  padding:4px 8px;
+  padding-left:14px;
+  border-radius:999px;
+  background:#fefce8;
+  border:1px solid #fbbf24;
+  font-size:0.85rem;
+}
+.post-list a::before{
+  content:"●";
+  position:absolute;
+  left:5px;
+  top:50%;
+  transform:translateY(-52%);
+  font-size:0.5rem;
+  color:#f97316;
+}
+.post-list a:hover{
+  background:#fffbeb;
+  color:#b45309;
+}
+
+/* 영화 placeholder – 빈 액자 */
+.placeholder-box{
+  min-height:120px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start;
+  font-size:0.9rem;
+  color:#4b5563;
+  border-radius:14px;
+  border:3px solid #e5e7eb;
+  padding:14px;
+  background:#fefce8;
+}
+.placeholder-small{
+  font-size:0.8rem;
+  color:#9ca3af;
+  margin-top:6px;
+  font-style:italic;
+}
 </style>
 </head>
 <body>
 <header>
-  <div class="logo">문화생활</div>
+  <div class="logo">MUNHWA LIFE</div>
   <nav>
-    <a href="#">메인</a>
-    <a href="#">영화</a>
-    <a href="#">연극</a>
-    <a href="#">뮤지컬</a>
+    <a href="index.html">메인</a>
+    <a href="moviecategory.html">영화</a>
+    <a href="연극카테고리.html">연극</a>
+    <a href="뮤지컬카테고리.html">뮤지컬</a>
   </nav>
 </header>
 
 <main>
 
-  <!-- 왼쪽 프로필,카테고리 -->
+  <!-- 왼쪽 프로필, 카테고리 -->
   <aside class="sidebar">
     <section class="card">
-      <div class="avatar">HYU</div>
+      <div class="avatar">
+        <span>HYU</span>
+      </div>
       <div class="profile">
-        <p>문화생활 블로그</p>
-        <p style="font-size:0.85rem;color:#8795a1;">(다양한 문화생활 관련 작품을 추천드립니다~)</p>
+        <p style="font-weight:700;">오늘의 문화생활 기록장</p>
+        <p style="font-size:0.85rem;color:#4b5563;line-height:1.7;">
+          공연장, 영화관, OTT, 무대와 스크린에서 만난 순간들을  
+          액자 속 한 장면처럼 남겨두는 개인 문화 아카이브입니다.
+        </p>
       </div>
     </section>
 
     <section class="card">
-      <a href="index.html">카테고리</a>
+      <h3>카테고리</h3>
       <ul class="category-list">
-        <li>🎬 영화 (Film)</li>
-        <a href="moviecategory.html">🎭 연극 (Play)</a>
-        <li>🎙 뮤지컬 (Musical)</li>
+        <li><a href="moviecategory.html">🎬 영화 (Film)</a></li>
+        <li><a href="연극카테고리.html">🎭 연극 (Play)</a></li>
+        <li><a href="뮤지컬카테고리.html">🎙 뮤지컬 (Musical)</a></li>
       </ul>
+    </section>
+
+    <section class="card">
+      <h3>이 블로그는…</h3>
+      <p style="font-size:0.85rem;color:#4b5563;line-height:1.7;">
+        평점보다 중요한 건 그날의 기분,  
+        눈에 남은 장면, 귀에 남은 한 소절이라고 생각한다.  
+        그래서 이곳에는 작품의 완벽한 분석보다는  
+        관객으로서 솔직하게 느낀 문화생활의 잔상을 기록하고 있다.
+      </p>
     </section>
   </aside>
 
   <!-- 오른쪽 메인 콘텐츠 -->
   <section class="content">
-    <section class="card">
-      <p style="
-        font-size:1.1rem;
-        color:#111827;
-        text-align:center;
-        font-weight:700;
-        letter-spacing:0.03em;
-      ">
-        당신이 좋아하는 작품이 여기 모두 모여있습니다.
-      </p>
+
+    <!-- 스포트라이트 스크린 섹션 -->
+    <section class="screen-card">
+      <div class="screen-inner">
+        <div class="screen-frame">
+          <div class="screen-content">
+            <h1 class="hero-title">오늘의 문화생활, 여기서 다시 불이 켜집니다.</h1>
+            <p class="hero-subtitle">
+              한 번 지나가면 끝인 줄 알았던 장면들도  
+              기록해 두면 언제든지 다시 감상할 수 있다.  
+              이곳은 영화와 연극, 뮤지컬 속 순간들을  
+              갤러리처럼 모아두는 나만의 전시 공간이다.
+            </p>
+            <div class="hero-meta">
+              <span>📅 최근 업데이트: 2025.12</span>
+              <span>·</span>
+              <span>🎭 연극 · 🎙 뮤지컬 중심으로 채워가는 중</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="screen-base"></div>
     </section>
 
-    <div class="category-grid">
-
-      <div>
-        <div class="category-title">🎬 영화</div>
-        <div class="placeholder-box">← 여기에 영화 글 목록 표시 예정</div>
+    <!-- 최근 글 섹션 -->
+    <section class="card">
+      <div class="section-title">
+        최근에 다녀온 작품들
       </div>
 
-      <div>
-        <div class="category-title">🎭 연극</div>
-        <ul class="post-list">
-          <li><a href="아마데우스.html">아마데우스 리뷰 보기</a></li>
-          <li><a href="쉬어메드니스.html">쉬어메드니스 리뷰 보기</a></li>
-          <li><a href="그을린사랑2.html">그을린사랑 리뷰 보기</a></li>
-        </ul>
+      <div class="post-grid">
+        <!-- 카드 1: 그을린사랑 -->
+        <a href="그을린사랑2.html" class="post-link">
+          <div class="post-card">
+            <div class="post-inner">
+              <div class="post-paper">
+                <div class="post-category">연극</div>
+                <div class="post-title">그을린 사랑 – 전쟁이 남긴 상처를 따라가는 무대</div>
+                <div class="post-meta">2025.12 · 극장 관람</div>
+                <div class="post-excerpt">
+                  영화로 익숙했던 이야기를 연극으로 다시 만났을 때,  
+                  간결한 무대와 배우들의 호흡만으로도 서사가 꽉 찰 수 있다는 걸 느꼈다.
+                </div>
+                <div class="post-more">감상 더 보기 →</div>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- 카드 2: 위키드 -->
+        <a href="위키드.html" class="post-link">
+          <div class="post-card">
+            <div class="post-inner">
+              <div class="post-paper">
+                <div class="post-category">뮤지컬</div>
+                <div class="post-title">위키드 – ‘사악한 마녀’를 다시 바라보는 시간</div>
+                <div class="post-meta">2025.12 · 뮤지컬 관람</div>
+                <div class="post-excerpt">
+                  초록 마녀 엘파바의 시선으로 오즈의 세계를 다시 보게 되면서,  
+                  우리가 믿어온 선과 악의 구도가 얼마나 불안정한지 생각하게 된다.
+                </div>
+                <div class="post-more">감상 더 보기 →</div>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- 카드 3: 노트르담 드 파리 -->
+        <a href="노트르담드파리.html" class="post-link">
+          <div class="post-card">
+            <div class="post-inner">
+              <div class="post-paper">
+                <div class="post-category">뮤지컬</div>
+                <div class="post-title">노트르담 드 파리 – 노래가 이끄는 비극적인 사랑</div>
+                <div class="post-meta">2025.12 · 넘버 중심 감상</div>
+                <div class="post-excerpt">
+                  대사는 최소한으로 줄이고 노래로 모든 감정을 밀어붙이는 스타일이라,  
+                  공연이 끝난 뒤에도 <i>Belle</i>의 멜로디가 계속 맴돈다.
+                </div>
+                <div class="post-more">감상 더 보기 →</div>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- 카드 4: 빌리 엘리어트 -->
+        <a href="빌리엘리어트.html" class="post-link">
+          <div class="post-card">
+            <div class="post-inner">
+              <div class="post-paper">
+                <div class="post-category">뮤지컬</div>
+                <div class="post-title">빌리 엘리어트 – 발레 슈즈에 담긴 계급과 꿈</div>
+                <div class="post-meta">2025.12 · 성장 서사</div>
+                <div class="post-excerpt">
+                  파업 현장과 발레 교실이 한 무대 위에 겹쳐지는 장면들에서,  
+                  문화생활이 곧 현실과 맞닿아 있다는 사실을 새삼 느끼게 된다.
+                </div>
+                <div class="post-more">감상 더 보기 →</div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- 카테고리별 목록 섹션 -->
+    <section class="card">
+      <div class="section-title">
+        장르별로 다시 보기
       </div>
 
-      <div>
-        <div class="category-title">🎙 뮤지컬</div>
-        <ul class="post-list">
-          <li><a href="노트르담드파리.html">노트르담 드 파리 — 리뷰 보기</a></li>
-          <li><a href="위키드.html">위키드 — 리뷰 보기</a></li>
-          <li><a href="빌리엘리어트.html">빌리 엘리어트 — 리뷰 보기</a></li>
-        </ul>
-      </div>
+      <div class="section-layout">
+        <!-- 영화 -->
+        <div>
+          <div class="category-title">🎬 영화</div>
+          <div class="placeholder-box">
+            아직 영화 감상 기록이 없습니다.
+            <div class="placeholder-small">
+              (곧 최근에 본 영화들로 이 액자를 채워나갈 예정입니다.)
+            </div>
+          </div>
+        </div>
 
-    </div>
+        <!-- 연극 -->
+        <div>
+          <div class="category-title">🎭 연극</div>
+          <ul class="post-list">
+            <li><a href="아마데우스.html">아마데우스 – 천재와 평범함을 바라보는 불편한 시선</a></li>
+            <li><a href="쉬어메드니스.html">쉬어 매드니스 – 관객이 함께 만드는 추리극</a></li>
+            <li><a href="그을린사랑2.html">그을린 사랑 – 기억, 전쟁, 그리고 가족의 비밀</a></li>
+          </ul>
+        </div>
+
+        <!-- 뮤지컬 -->
+        <div>
+          <div class="category-title">🎙 뮤지컬</div>
+          <ul class="post-list">
+            <li><a href="노트르담드파리.html">노트르담 드 파리 — 프랑스 뮤지컬의 정수</a></li>
+            <li><a href="위키드.html">위키드 — 선과 악의 경계를 흔드는 초록 마녀 이야기</a></li>
+            <li><a href="빌리엘리어트.html">빌리 엘리어트 — 무대 위에서 꿈을 증명하는 소년</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
   </section>
 
 </main>
