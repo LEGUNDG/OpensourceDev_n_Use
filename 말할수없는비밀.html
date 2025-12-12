@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>말할 수 없는 비밀 – 문화 생활 기록</title>
+
+<link rel="stylesheet" as="style" crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+
+<style>
+/* 기존 쉬어메드니스.html의 CSS와 동일 */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:Pretendard, system-ui,-apple-system,"Segoe UI",sans-serif;
+  background:#f1f2f4;
+  color:#111827;
+  line-height:1.7;
+  min-height:100vh;
+}
+a{text-decoration:none;color:inherit;}
+
+header{
+  padding:16px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+header .logo{
+  font-size:1.1rem;
+  font-weight:700;
+  letter-spacing:0.18em;
+}
+header nav a{
+  margin-left:18px;
+  font-size:0.9rem;
+  opacity:0.7;
+  text-decoration:none;
+  color:#111827;
+}
+header nav a:hover{
+  opacity:1;
+}
+
+main{
+  max-width:1000px;
+  margin:0 auto 40px;
+  padding:0 16px 40px;
+}
+
+.page-shell{
+  margin-top:20px;
+  border-radius:16px;
+  background:#e5e7eb;
+  box-shadow:0 16px 40px rgba(15,23,42,0.18);
+  padding:18px 14px 24px;
+}
+.page-inner{
+  position:relative;
+  border-radius:14px;
+  overflow:hidden;
+  background:linear-gradient(to bottom right, #f9fafb 0%, #e5e7eb 60%, #f3f4f6 100%);
+}
+
+.page-content{
+  position:relative;
+  z-index:1;
+  padding:28px 32px 30px;
+}
+
+.top-layout{
+  display:flex;
+  gap:24px;
+  align-items:flex-start;
+  margin-bottom:24px;
+  flex-wrap:wrap;
+}
+.poster-wrap{
+  flex:0 0 260px;
+}
+.poster-img{
+  display:block;
+  width:100%;
+  max-width:260px;
+  height:auto;
+  border-radius:14px;
+  object-fit:cover;
+  box-shadow:0 12px 26px rgba(15,23,42,0.28);
+}
+.top-text{
+  flex:1 1 0;
+}
+.title-label{
+  font-size:0.85rem;
+  color:#6b7280;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  margin-bottom:4px;
+}
+h1{
+  font-size:1.6rem;
+  font-weight:800;
+  margin-bottom:8px;
+}
+.subtitle{
+  font-size:0.92rem;
+  color:#4b5563;
+}
+
+.section{
+  margin-top:18px;
+  background:#ffffff;
+  padding:18px 20px 20px;
+  border-radius:14px;
+  border:1px solid #e5e7eb;
+  box-shadow:0 8px 20px rgba(15,23,42,0.08);
+}
+.section h2{
+  font-size:1.1rem;
+  margin-bottom:10px;
+}
+
+.gallery{
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px;
+  margin-top:8px;
+}
+.poster3-img{
+  display:block;
+  width:160px;
+  height:160px;
+  object-fit:cover;
+  border-radius:12px;
+  box-shadow:0 10px 22px rgba(15,23,42,0.25);
+}
+.cast-name{
+  margin-top:6px;
+  font-size:0.9rem;
+  font-weight:600;
+  text-align:center;
+}
+
+.video-wrap{
+  margin-top:8px;
+  margin-bottom:8px;
+}
+.video-wrap iframe{
+  max-width:100%;
+}
+
+.back-link{
+  display:inline-block;
+  margin-top:22px;
+  padding:10px 16px;
+  border-radius:10px;
+  background:#ffffff;
+  border:1px solid #e5e7eb;
+  font-size:0.9rem;
+  color:#1f2937;
+  box-shadow:0 6px 12px rgba(15,23,42,0.08);
+  transition:.15s;
+}
+.back-link:hover{
+  background:#fffbeb;
+  border-color:#fed7aa;
+}
+
+@media (max-width:720px){
+  .page-content{
+    padding:22px 18px 24px;
+  }
+  .top-layout{
+    flex-direction:column;
+  }
+  .poster-wrap{
+    flex:none;
+    max-width:260px;
+  }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">CULTURE LOG</div>
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="#movie">영화</a>
+    <a href="#play">연극</a>
+    <a href="#musical">뮤지컬</a>
+  </nav>
+</header>
+
+<main>
+  <section class="page-shell">
+    <div class="page-inner">
+      <div class="page-content">
+
+        <div class="top-layout">
+          <div class="poster-wrap">
+            <img src="https://image.tmdb.org/t/p/original/pT73i9W3Mdr0eZas734g25WbKz6.jpg"
+                 alt="말할 수 없는 비밀 포스터"
+                 class="poster-img">
+          </div>
+          <div class="top-text">
+            <div class="title-label">영화 리뷰</div>
+            <h1>🎹 말할 수 없는 비밀</h1>
+            <p class="subtitle">
+             <b>"너를 만난 것, 그 자체가 기적이었어."</b><br>
+             예술 학교를 배경으로 펼쳐지는 피아노 천재들의 시공간을 초월한 첫사랑.
+            </p>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>📌 작품 소개</h2>
+          <p>
+            <b>말할 수 없는 비밀 (Secret)</b>은 2008년 개봉한 대만 영화로, 주연 배우인 주걸륜이 직접 각본을 쓰고 감독까지 맡아 화제가 된 작품이다. 개봉 당시 대만은 물론 한국에서도 큰 신드롬을 일으키며 '피아노 영화'의 대명사가 되었다.
+            클래식 음악과 판타지 로맨스가 절묘하게 결합된 이 영화는 쇼팽, 라흐마니노프 등의 명곡을 현대적인 감각으로 재해석했다. 특히 전설적인 '피아노 배틀' 장면은 지금까지도 수많은 패러디를 낳으며 회자되고 있다. 아름다운 영상미와 감성적인 OST, 그리고 후반부의 충격적인 반전이 돋보이는 수작이다.
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>📖 줄거리</h2>
+          <p>
+            예술고등학교로 전학 온 피아노 천재 '상륜(주걸륜)'. 학교를 둘러보던 중, 오래된 연습실에서 흘러나오는 신비로운 피아노 선율에 이끌리게 된다. 그곳에서 그는 비밀스러운 소녀 '샤오위(계륜미)'를 만난다.
+          </p>
+          <p>
+            "방금 친 곡이 뭐야?"라는 상륜의 질문에 샤오위는 귓속말러 <i>"비밀이야(Secret)."</i>라고 속삭인다. 두 사람은 피아노를 매개로 급속도로 가까워지며 풋풋한 사랑을 키워나간다. 하지만 샤오위는 어딘가 모르게 슬퍼 보이고, 불쑥 나타났다 사라지기를 반복하며 상륜을 애태운다.
+          </p>
+          <p>
+            졸업식이 다가오던 어느 날, 상륜은 샤오위가 간직해온 믿기 힘든 진실을 마주하게 된다. 낡은 악보 'Secret'에 숨겨진 시간 여행의 비밀, 그리고 사랑하는 사람을 위해 시공간을 뛰어넘는 상륜의 연주가 시작된다.
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>🎭 출연 배우 </h2>
+          <div class="gallery">
+            <div>
+              <img src="https://image.tmdb.org/t/p/w500/A2W2ZK6zZkwR6Y8yZ1R2Y2Y2Y2Y.jpg" 
+                   alt="상륜 역 주걸륜"
+                   class="poster3-img" style="background:#ddd">
+              <div class="cast-name">상륜 역 주걸륜</div>
+            </div>
+
+            <div>
+              <img src="https://image.tmdb.org/t/p/w500/B3X3ZK6zZkwR6Y8yZ1R2Y2Y2Y2Y.jpg"
+                   alt="샤오위 역 계륜미"
+                   class="poster3-img" style="background:#ddd">
+              <div class="cast-name">샤오위 역 계륜미</div>
+            </div>
+
+            <div>
+              <img src="https://image.tmdb.org/t/p/w500/C4Y4ZK6zZkwR6Y8yZ1R2Y2Y2Y2Y.jpg"
+                   alt="상륜 부 역 황추생"
+                   class="poster3-img" style="background:#ddd">
+              <div class="cast-name">상륜 부 역 황추생</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>🎼 대표 OST</h2>
+
+          <p>🎙 Piano Battle (흑건 & 왈츠)</p>
+          <div class="video-wrap">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/HESwPzW3-BA?si=example" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+
+          <p>🎙 Secret (Time Travel Theme)</p>
+          <div class="video-wrap">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/2m5s4s4s4s?si=example" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>📝 감상평</h2>
+          <p>
+            <b>피아노 소리만 들어도 눈물이 나요.</b><br>
+            어렸을 때 보고 성인이 되어 다시 봤는데, 그때는 몰랐던 감정들이 파도처럼 밀려오네요. 단순히 로맨스 영화인 줄 알았는데, 스토리의 짜임새와 복선 회수가 정말 완벽합니다. 특히 마지막에 상륜이 건물을 무너뜨릴 듯 피아노를 치는 장면은 전율 그 자체였습니다.
+          </p>
+
+          <p>
+            <br><b>한 손으로 피아노 치는 건 반칙 아닌가요?</b><br>
+            주걸륜이 피아노 천재라는 건 알았지만 연출력까지 천재일 줄이야. 피아노 배틀 씬은 10년이 지나도 촌스럽지 않고 세련됐습니다. 계륜미 배우의 청순하고 신비로운 분위기가 영화 전체를 하드캐리했네요. 비 오는 날이나 옛날 교실 풍경이 생각날 때마다 꺼내보고 싶은 영화입니다.
+          </p>
+
+          <p>
+            <br><b>OST가 주인공인 영화</b><br>
+            영화를 다 보고 나서도 며칠 동안 OST를 흥얼거리게 됩니다. 클래식을 잘 모르는 사람도 빠져들게 만드는 매력이 있어요. 시간 여행이라는 소재가 자칫 유치해질 수 있는데 음악으로 그 개연성을 다 채워버린 느낌? 첫사랑의 아련함과 음악의 열정을 동시에 느끼고 싶다면 강추!
+          </p>
+        </div>
+
+        <a href="index.html" class="back-link">
+          ← 메인으로 돌아가기
+        </a>
+
+      </div>
+    </div>
+  </section>
+</main>
+</body>
+</html>
