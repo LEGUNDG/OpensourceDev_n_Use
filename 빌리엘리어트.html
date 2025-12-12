@@ -18,7 +18,7 @@ body{
 }
 a{text-decoration:none;color:inherit;}
 
-/* ===== 헤더 ===== */
+/* ===== 공통 헤더 ===== */
 header{
   padding:16px 40px;
   display:flex;
@@ -138,7 +138,7 @@ h1{
   box-shadow:0 6px 12px rgba(15,23,42,0.08);
 }
 
-/* ===== 반응형 ===== */
+/* 반응형 */
 @media (max-width:720px){
   .page-content{padding:22px 18px;}
   .top-layout{flex-direction:column;}
@@ -156,14 +156,16 @@ h1{
 <div class="page-inner">
 <div class="page-content">
 
-<!-- 포스터 -->
+<!-- 상단 타이틀 / 포스터 -->
 <div class="top-layout">
   <div class="poster-wrap">
-    <!-- ✅ 무조건 보이는 포스터 -->
-    <img src="https://picsum.photos/400/600?random=101"
-         alt="빌리 엘리어트 포스터"
-         class="poster-img">
+    <!-- ✅ 네가 올린 빌리 엘리어트 공식 포스터 -->
+    <img
+      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAGQCAYAAAC9eZpEAAA..."
+      alt="뮤지컬 빌리 엘리어트 공식 포스터"
+      class="poster-img">
   </div>
+
   <div>
     <div class="title-label">뮤지컬 리뷰</div>
     <h1>🎙 빌리 엘리어트 (Billy Elliot)</h1>
@@ -189,9 +191,9 @@ h1{
 <div class="section">
 <h2>📖 줄거리</h2>
 <p>
-탄광촌에서 자란 소년 빌리는 복싱 대신 발레에 끌리게 된다.
+탄광촌 소년 빌리는 복싱 대신 발레에 끌리게 된다.
 아버지의 반대와 사회적 편견 속에서도
-빌리는 자신의 감정과 재능을 포기하지 않는다.
+빌리는 자신의 재능과 감정을 포기하지 않는다.
 </p>
 <p>
 점차 가족과 공동체는 빌리의 선택을 이해하게 되고,
@@ -199,23 +201,23 @@ h1{
 </p>
 </div>
 
-<!-- 출연진 -->
+<!-- 출연 배우 -->
 <div class="section">
-<h2>🎭 출연 배우</h2>
+<h2>🎭 출연 배우 (예시)</h2>
 <div class="gallery">
 
 <div>
-  <img src="https://picsum.photos/300/300?random=201" class="poster3-img">
+  <img src="https://picsum.photos/300/300?random=501" class="poster3-img">
   <div class="cast-name">빌리 엘리어트 역</div>
 </div>
 
 <div>
-  <img src="https://picsum.photos/300/300?random=202" class="poster3-img">
+  <img src="https://picsum.photos/300/300?random=502" class="poster3-img">
   <div class="cast-name">윌킨슨 선생님 역</div>
 </div>
 
 <div>
-  <img src="https://picsum.photos/300/300?random=203" class="poster3-img">
+  <img src="https://picsum.photos/300/300?random=503" class="poster3-img">
   <div class="cast-name">아버지 역</div>
 </div>
 
@@ -228,14 +230,12 @@ h1{
 
 <p>🎙 Electricity</p>
 <div class="video-wrap">
-<iframe src="https://www.youtube.com/embed/dlbA93OCobs"
-        allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/dlbA93OCobs" allowfullscreen></iframe>
 </div>
 
 <p>🎙 The Stars Look Down</p>
 <div class="video-wrap">
-<iframe src="https://www.youtube.com/embed/77WZf7cmv4A"
-        allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/77WZf7cmv4A" allowfullscreen></iframe>
 </div>
 </div>
 
