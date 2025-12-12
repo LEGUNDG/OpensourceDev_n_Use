@@ -19,7 +19,6 @@ body{
 }
 a{text-decoration:none;color:inherit;}
 
-/* ===== 공통 헤더 (메인 페이지와 톤 맞춤) ===== */
 header{
   padding:16px 40px;
   display:flex;
@@ -35,19 +34,15 @@ header nav a{
   margin-left:18px;
   font-size:0.9rem;
   opacity:0.7;
-  text-decoration:none;
-  color:#111827;
 }
-header nav a:hover{ opacity:1; }
+header nav a:hover{opacity:1;}
 
-/* ===== 레이아웃 ===== */
 main{
   max-width:1000px;
   margin:0 auto 40px;
   padding:0 16px 40px;
 }
 
-/* 바깥 껍데기 */
 .page-shell{
   margin-top:20px;
   border-radius:16px;
@@ -56,20 +51,14 @@ main{
   padding:18px 14px 24px;
 }
 .page-inner{
-  position:relative;
   border-radius:14px;
   overflow:hidden;
   background:linear-gradient(to bottom right, #f9fafb 0%, #e5e7eb 60%, #f3f4f6 100%);
 }
-
-/* 안쪽 콘텐츠 카드 */
 .page-content{
-  position:relative;
-  z-index:1;
   padding:28px 32px 30px;
 }
 
-/* 상단 타이틀 + 포스터 정보 */
 .top-layout{
   display:flex;
   gap:24px;
@@ -77,22 +66,18 @@ main{
   margin-bottom:24px;
   flex-wrap:wrap;
 }
-.poster-wrap{ flex:0 0 260px; }
+.poster-wrap{flex:0 0 260px;}
 .poster-img{
-  display:block;
   width:100%;
   max-width:260px;
-  height:auto;
   border-radius:14px;
-  object-fit:cover;
   box-shadow:0 12px 26px rgba(15,23,42,0.28);
 }
-.top-text{ flex:1 1 0; }
+.top-text{flex:1;}
 .title-label{
   font-size:0.85rem;
   color:#6b7280;
   letter-spacing:0.14em;
-  text-transform:uppercase;
   margin-bottom:4px;
 }
 h1{
@@ -105,7 +90,6 @@ h1{
   color:#4b5563;
 }
 
-/* 섹션 카드 공통 */
 .section{
   margin-top:18px;
   background:#ffffff;
@@ -119,15 +103,12 @@ h1{
   margin-bottom:10px;
 }
 
-/* 배우 갤러리 */
 .gallery{
   display:flex;
-  flex-wrap:wrap;
   gap:18px;
-  margin-top:8px;
+  flex-wrap:wrap;
 }
 .poster3-img{
-  display:block;
   width:160px;
   height:160px;
   object-fit:cover;
@@ -141,24 +122,8 @@ h1{
   text-align:center;
 }
 
-/* 유튜브 반응형 */
-.video-wrap{
-  margin-top:8px;
-  margin-bottom:8px;
-  position:relative;
-  width:100%;
-  max-width:860px;
-  aspect-ratio:16/9;
-}
-.video-wrap iframe{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  border:0;
-}
+.video-wrap iframe{max-width:100%;}
 
-/* 뒤로가기 버튼 */
 .back-link{
   display:inline-block;
   margin-top:22px;
@@ -167,20 +132,16 @@ h1{
   background:#ffffff;
   border:1px solid #e5e7eb;
   font-size:0.9rem;
-  color:#1f2937;
   box-shadow:0 6px 12px rgba(15,23,42,0.08);
-  transition:.15s;
 }
 .back-link:hover{
   background:#fffbeb;
   border-color:#fed7aa;
 }
 
-/* 반응형 */
 @media (max-width:720px){
-  .page-content{ padding:22px 18px 24px; }
-  .top-layout{ flex-direction:column; }
-  .poster-wrap{ flex:none; max-width:260px; }
+  .page-content{padding:22px 18px;}
+  .top-layout{flex-direction:column;}
 }
 </style>
 </head>
@@ -197,174 +158,57 @@ h1{
 </header>
 
 <main>
-  <section class="page-shell">
-    <div class="page-inner">
-      <div class="page-content">
+<section class="page-shell">
+<div class="page-inner">
+<div class="page-content">
 
-        <!-- 상단 타이틀 / 대표 이미지 -->
-        <div class="top-layout">
-          <div class="poster-wrap">
-            <!-- 공식 포스터 대신(저작권 이슈), 위키드 간판이 포함된 자유 라이선스 사진 사용 -->
-           <img
-              src="https://upload.wikimedia.org/wikipedia/en/6/6f/Wicked_Poster.jpg"
-              alt="뮤지컬 위키드 공식 포스터"
-              
+<!-- 상단 -->
+<div class="top-layout">
+  <div class="poster-wrap">
+    <!-- ✅ 위키드 공식 포스터 -->
+    <img
+      src="https://upload.wikimedia.org/wikipedia/en/6/6f/Wicked_Poster.jpg"
+      alt="뮤지컬 위키드 공식 포스터"
+      class="poster-img">
+  </div>
 
-              class="poster-img"
-              loading="lazy"
-            >
-          </div>
-          <div class="top-text">
-            <div class="title-label">뮤지컬 리뷰</div>
-            <h1>🎙 위키드 (Wicked)</h1>
-            <p class="subtitle">
-              ‘오즈의 마법사’의 이면에서, 초록 마녀 엘파바와 인기녀 글린다가
-              어떻게 ‘사악한 마녀’와 ‘착한 마녀’가 되었는지를 다시 쓰는 이야기.
-            </p>
-          </div>
-        </div>
+  <div class="top-text">
+    <div class="title-label">뮤지컬 리뷰</div>
+    <h1>🎙 위키드 (Wicked)</h1>
+    <p class="subtitle">
+      ‘오즈의 마법사’의 이면에서,
+      초록 마녀 엘파바와 글린다가 어떻게 다른 길을 걷게 되었는지를 다시 쓰는 이야기.
+    </p>
+  </div>
+</div>
 
-        <!-- 작품 소개 -->
-        <div class="section">
-          <h2>📌 작품 소개</h2>
-          <p>
-            <b>위키드(Wicked)</b>는 그레고리 매과이어의 소설을 바탕으로 한 브로드웨이 뮤지컬로,
-            L. 프랭크 바움의 원작 『오즈의 마법사』와 1939년 영화의 세계관을 비틀어
-            ‘악당’으로 알려진 서쪽 마녀의 관점에서 이야기를 풀어내는 작품이다.
-            2003년 브로드웨이 거슈윈 시어터에서 초연된 이후,
-            지금까지도 꾸준히 사랑받는 스테디셀러 작품이다.
-          </p>
-          <p>
-            작곡·가사는 스티븐 슈워츠(Stephen Schwartz)가 맡았고,
-            <i>“Defying Gravity”</i>, <i>“Popular”</i> 등 중독성 있는 넘버와
-            초록빛 무대, 화려한 조명 연출로 유명하다.
-          </p>
-        </div>
+<!-- 작품 소개 -->
+<div class="section">
+<h2>📌 작품 소개</h2>
+<p>
+<b>위키드(Wicked)</b>는 그레고리 매과이어의 소설을 원작으로 한 브로드웨이 뮤지컬로,
+2003년 초연 이후 지금까지도 전 세계적으로 사랑받는 작품이다.
+<i>Defying Gravity</i>, <i>Popular</i> 등 강렬한 넘버와
+선악의 이분법을 뒤흔드는 서사가 특징이다.
+</p>
+</div>
 
-        <!-- 줄거리 -->
-        <div class="section">
-          <h2>📖 줄거리</h2>
-          <p>
-            초록 피부를 가진 엘파바는 태어날 때부터 ‘괴물’ 취급을 받으며 자란다.
-            마법 학교 시절, 얄미울 정도로 사랑받는 인기녀 글린다와 룸메이트가 되면서
-            두 사람은 처음에는 서로를 싫어하지만, 점차 진심을 나누며 친구가 된다.
-          </p>
-          <p>
-            그러나 오즈의 마법사가 사실은 선량한 통치자가 아니라
-            약자들을 억압하고 진실을 감추는 인물이라는 사실을 알게 되면서,
-            엘파바는 거짓된 권력에 맞서 싸우기로 결심한다.
-            마법사의 편에 선 글린다와, 진실을 위해 고립을 선택한 엘파바는
-            결국 서로 다른 길을 걷게 되고, 세상은 엘파바를 ‘사악한 마녀’라고 부르기 시작한다.
-          </p>
-          <p>
-            관객이 알고 있던 ‘오즈의 마법사’ 이야기의 장면들이
-            어떻게 뒤편에서 만들어졌는지가 하나씩 드러나면서,
-            작품은 “과연 누가 진짜 악한가?”라는 질문을 남긴다.
-            선과 악의 이분법을 흔들며, 다른 관점에서 세상을 바라보게 만드는 뮤지컬이다.
-          </p>
-        </div>
+<!-- 줄거리 -->
+<div class="section">
+<h2>📖 줄거리</h2>
+<p>
+초록 피부로 태어난 엘파바는 차별 속에서 성장하고,
+인기 많은 글린다와 친구가 되지만
+권력과 진실을 둘러싼 선택 앞에서 서로 다른 길을 걷게 된다.
+세상은 엘파바를 ‘사악한 마녀’라 부르기 시작한다.
+</p>
+</div>
 
-        <!-- 출연 배우 -->
-        <div class="section">
-          <h2>🎭 출연 배우 </h2>
-          <div class="gallery">
-            <div>
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Idina_Menzel_at_the_2023_Capital_Pride_concert_-_7_%28cropped%29.jpg/960px-Idina_Menzel_at_the_2023_Capital_Pride_concert_-_7_%28cropped%29.jpg"
-                alt="Idina Menzel"
-                class="poster3-img"
-                loading="lazy"
-              >
-              <div class="cast-name">엘파바 역 Idina Menzel</div>
-            </div>
+<a href="index.html" class="back-link">← 메인으로 돌아가기</a>
 
-            <div>
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Kristin_Chenoweth_by_Gage_Skidmore_3.jpg/692px-Kristin_Chenoweth_by_Gage_Skidmore_3.jpg"
-                alt="Kristin Chenoweth"
-                class="poster3-img"
-                loading="lazy"
-              >
-              <div class="cast-name">글린다 역 Kristin Chenoweth</div>
-            </div>
-
-            <div>
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Oliver_Tompsett_at_Wicked_10th_Birthday_2016.jpg"
-                alt="Oliver Tompsett"
-                class="poster3-img"
-                loading="lazy"
-              >
-              <div class="cast-name">피예로 역 Oliver Tompsett</div>
-            </div>
-          </div>
-          <p style="margin-top:10px;color:#6b7280;font-size:0.9rem;">
-            * 이미지들은 위키미디어 커먼즈(공개 라이선스)에서 가져온 사진이라 “바로 보이게” 동작한다. :contentReference[oaicite:1]{index=1}
-          </p>
-        </div>
-
-        <!-- 넘버 -->
-        <div class="section">
-          <h2>🎼 대표 넘버</h2>
-
-          <p>🎙 Defying Gravity</p>
-          <div class="video-wrap">
-            <iframe
-              src="https://www.youtube.com/embed/AoON1CyhQAM"
-              title="Defying Gravity - Wicked 20th Anniversary Edition"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
-          </div>
-
-          <p>🎙 Popular</p>
-          <div class="video-wrap">
-            <iframe
-              src="https://www.youtube.com/embed/p3GJlvfLr8E"
-              title="Wicked - Popular (Live Performance)"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
-          </div>
-        </div>
-
-        <!-- 감상평 -->
-        <div class="section">
-          <h2>📝 감상평</h2>
-          <p>
-            <b>‘악당’의 서사를 다시 쓰는 즐거움</b><br>
-            위키드는 우리가 너무 잘 아는 오즈 세계를 그대로 쓰지 않고,
-            그 뒷면을 상상해 보는 작품이라 보는 내내 “아, 그래서 그 장면이 이렇게 연결되는구나” 하는
-            깨달음이 쌓이는 재미가 있다. 특히 마지막에 이르면
-            ‘사악한 마녀’라는 이름이 얼마나 일방적인 낙인이었는지 더 뚜렷하게 느껴진다.
-          </p>
-
-          <p>
-            <br><b>Defying Gravity의 무대 장면</b><br>
-            1막 마지막 넘버인 <i>“Defying Gravity”</i>는 거의 하나의 클라이맥스 쇼 같다.
-            엘파바가 공중으로 떠오르며, 조명과 오케스트라가 한 번에 폭발하는 순간
-            객석의 에너지가 확 바뀐다. 가사 한 줄 한 줄이
-            ‘남들이 정해 준 역할을 거부하고, 내가 선택한 길로 간다’는 선언이라서
-            개인적으로도 꽤 위로가 되는 넘버였다.
-          </p>
-
-          <p>
-            <br><b>캐릭터의 밸런스를 잡아주는 글린다</b><br>
-            엘파바가 진지함과 분노를 담당한다면, 글린다는 이 작품의 코미디와 귀여움을 책임진다.
-            처음에는 다소 가벼운 인물처럼 보이지만,
-            시간이 지날수록 현실적인 타협과 죄책감 사이에서 흔들리는 모습이 보여서
-            ‘착한 마녀’라는 이미지 뒤에 숨은 복잡한 감정이 잘 드러난다.
-            두 인물이 서로의 거울처럼 대비되는 점이 이 뮤지컬의 가장 큰 힘인 것 같다.
-          </p>
-        </div>
-
-        <a href="index.html" class="back-link">← 메인으로 돌아가기</a>
-
-      </div>
-    </div>
-  </section>
+</div>
+</div>
+</section>
 </main>
 </body>
 </html>
