@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>트루먼 쇼 – 문화 생활 기록</title>
+
+<link rel="stylesheet" as="style" crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+
+<style>
+/* 기존 쉬어메드니스.html의 CSS와 동일 */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:Pretendard, system-ui,-apple-system,"Segoe UI",sans-serif;
+  background:#f1f2f4;
+  color:#111827;
+  line-height:1.7;
+  min-height:100vh;
+}
+a{text-decoration:none;color:inherit;}
+
+header{
+  padding:16px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+header .logo{
+  font-size:1.1rem;
+  font-weight:700;
+  letter-spacing:0.18em;
+}
+header nav a{
+  margin-left:18px;
+  font-size:0.9rem;
+  opacity:0.7;
+  text-decoration:none;
+  color:#111827;
+}
+header nav a:hover{
+  opacity:1;
+}
+
+main{
+  max-width:1000px;
+  margin:0 auto 40px;
+  padding:0 16px 40px;
+}
+
+.page-shell{
+  margin-top:20px;
+  border-radius:16px;
+  background:#e5e7eb;
+  box-shadow:0 16px 40px rgba(15,23,42,0.18);
+  padding:18px 14px 24px;
+}
+.page-inner{
+  position:relative;
+  border-radius:14px;
+  overflow:hidden;
+  background:linear-gradient(to bottom right, #f9fafb 0%, #e5e7eb 60%, #f3f4f6 100%);
+}
+
+.page-content{
+  position:relative;
+  z-index:1;
+  padding:28px 32px 30px;
+}
+
+.top-layout{
+  display:flex;
+  gap:24px;
+  align-items:flex-start;
+  margin-bottom:24px;
+  flex-wrap:wrap;
+}
+.poster-wrap{
+  flex:0 0 260px;
+}
+.poster-img{
+  display:block;
+  width:100%;
+  max-width:260px;
+  height:auto;
+  border-radius:14px;
+  object-fit:cover;
+  box-shadow:0 12px 26px rgba(15,23,42,0.28);
+}
+.top-text{
+  flex:1 1 0;
+}
+.title-label{
+  font-size:0.85rem;
+  color:#6b7280;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  margin-bottom:4px;
+}
+h1{
+  font-size:1.6rem;
+  font-weight:800;
+  margin-bottom:8px;
+}
+.subtitle{
+  font-size:0.92rem;
+  color:#4b5563;
+}
+
+.section{
+  margin-top:18px;
+  background:#ffffff;
+  padding:18px 20px 20px;
+  border-radius:14px;
+  border:1px solid #e5e7eb;
+  box-shadow:0 8px 20px rgba(15,23,42,0.08);
+}
+.section h2{
+  font-size:1.1rem;
+  margin-bottom:10px;
+}
+
+.gallery{
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px;
+  margin-top:8px;
+}
+.poster3-img{
+  display:block;
+  width:160px;
+  height:160px;
+  object-fit:cover;
+  border-radius:12px;
+  box-shadow:0 10px 22px rgba(15,23,42,0.25);
+}
+.cast-name{
+  margin-top:6px;
+  font-size:0.9rem;
+  font-weight:600;
+  text-align:center;
+}
+
+.video-wrap{
+  margin-top:8px;
+  margin-bottom:8px;
+}
+.video-wrap iframe{
+  max-width:100%;
+}
+
+.back-link{
+  display:inline-block;
+  margin-top:22px;
+  padding:10px 16px;
+  border-radius:10px;
+  background:#ffffff;
+  border:1px solid #e5e7eb;
+  font-size:0.9rem;
+  color:#1f2937;
+  box-shadow:0 6px 12px rgba(15,23,42,0.08);
+  transition:.15s;
+}
+.back-link:hover{
+  background:#fffbeb;
+  border-color:#fed7aa;
+}
+
+@media (max-width:720px){
+  .page-content{
+    padding:22px 18px 24px;
+  }
+  .top-layout{
+    flex-direction:column;
+  }
+  .poster-wrap{
+    flex:none;
+    max-width:260px;
+  }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">CULTURE LOG</div>
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="#movie">영화</a>
+    <a href="#play">연극</a>
+    <a href="#musical">뮤지컬</a>
+  </nav>
+</header>
+
+<main>
+  <section class="page-shell">
+    <div class="page-inner">
+      <div class="page-content">
+
+        <div class="top-layout">
+          <div class="poster-wrap">
+            <img src="https://image.tmdb.org/t/p/original/m1H1Gv4Qz5h1h1h1h1h.jpg"
+                 alt="트루먼 쇼 포스터"
+                 class="poster-img">
+          </div>
+          <div class="top-text">
+            <div class="title-label">영화 리뷰</div>
+            <h1>🎥 트루먼 쇼</h1>
+            <p class="subtitle">
+             <b>"Good afternoon, good evening, and good night."</b><br>
+             자신의 평범한 일상이 전 세계에 생중계되고 있다는 사실을 깨달은 한 남자의 탈출기.
+            </p>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>📌 작품 소개</h2>
+          <p>
+            <b>트루먼 쇼 (The Truman Show)</b>는 코미디의 황제 짐 캐리가 정극 연기에 도전하여 평단의 극찬을 받은 1998년 작품이다. 미디어가 개인의 삶을 어디까지 침해할 수 있는가에 대한 날카로운 풍자와, 스스로의 인생을 개척하고자 하는 인간의 자유 의지를 깊이 있게 다루었다.
+            거대한 세트장 안에서 태어나고 자란 트루먼의 삶을 통해 관객들에게 '진실된 삶이란 무엇인가'라는 묵직한 질문을 던진다. 아카데미 시상식 각본상 노미네이트 등 작품성을 인정받았으며, 엔딩 장면은 영화 역사상 가장 감동적인 명장면 중 하나로 꼽힌다.
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>📖 줄거리</h2>
+          <p>
+            작은 섬마을 씨헤이븐에서 보험 설계사로 평범하게 살고 있는 '트루먼 버뱅크(짐 캐리)'. 그는 유쾌한 성격에 사랑하는 아내, 친한 친구까지 남부러울 것 없는 행복한 삶을 살고 있다. 하지만 어느 날부터인가 그는 자신의 일상에 미묘한 어색함을 느끼기 시작한다.
+          </p>
+          <p>
+            하늘에서 조명이 떨어지고, 죽은 줄 알았던 아버지를 길거리에서 마주치며, 라디오 주파수에서는 자신의 동선을 중계하는 소리가 들린다. 급기야 아내는 다급한 상황에서도 뜬금없이 코코아 광고 멘트를 날린다.
+          </p>
+          <p>
+            결국 트루먼은 자신이 살고 있는 이 세상이 거대한 스튜디오이며, 자신의 30년 인생 모든 순간이 전 세계에 생중계되는 리얼리티 쇼 '트루먼 쇼'였다는 사실을 깨닫는다. 모든 것이 가짜인 세상에서 유일하게 '진짜'인 트루먼. 그는 쇼의 창조자 '크리스토프'가 통제하는 가짜 천국을 벗어나 진짜 세상으로 나아가기 위한 목숨 건 탈출을 감행한다.
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>🎭 출연 배우 </h2>
+          <div class="gallery">
+            <div>
+              <img src="https://image.tmdb.org/t/p/w500/JimCarrey.jpg"
+                   alt="트루먼 역 짐 캐리"
+                   class="poster3-img" style="background:#ddd">
+              <div class="cast-name">트루먼 역 짐 캐리</div>
+            </div>
+
+            <div>
+              <img src="https://image.tmdb.org/t/p/w500/EdHarris.jpg"
+                   alt="크리스토프 역 에드 해리스"
+                   class="poster3-img" style="background:#ddd">
+              <div class="cast-name">크리스토프 역 에드 해리스</div>
+            </div>
+
+            <div>
+              <img src="https://image.tmdb.org/t/p/w500/LauraLinney.jpg"
+                   alt="메릴 역 로라 리니"
+                   class="poster3-img" style="background:#ddd">
+              <div class="cast-name">메릴 역 로라 리니</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>🎼 대표 OST</h2>
+
+          <p>🎙 Truman Sleeps</p>
+          <div class="video-wrap">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/4KzmTo774EQ?si=example" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+
+          <p>🎙 It's a Life</p>
+          <div class="video-wrap">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/6H6erGc1LnU?si=example" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>📝 감상평</h2>
+          <p>
+            <b>짐 캐리의 웃음 뒤에 숨겨진 페이소스.</b><br>
+            그저 웃긴 코미디 배우인 줄 알았던 짐 캐리를 다시 보게 만든 영화. 트루먼이 진실을 알게 되었을 때의 그 공허한 눈빛과, 마지막에 문을 열고 나갈 때의 환한 미소가 잊혀지지 않아요. "못 볼지도 모르니 미리 하죠."라는 대사가 이렇게 슬프고도 아름답게 들릴 줄이야.
+          </p>
+
+          <p>
+            <br><b>내 인생도 누군가 지켜보고 있는 건 아닐까?</b><br>
+            영화를 보고 나서 며칠 동안 하늘을 쳐다보는 버릇이 생겼습니다. 단순히 영화적 상상력을 넘어서 현대 사회의 관음증과 미디어의 폭력을 소름 끼치게 잘 표현했어요. 안전한 가짜 세상보다 위험한 진짜 세상을 선택한 트루먼의 용기에 박수를 보냅니다.
+          </p>
+
+          <p>
+            <br><b>인생 영화, 죽기 전에 꼭 봐야 할 명작.</b><br>
+            마지막에 트루먼이 배를 타고 폭풍우를 뚫고 나가는 장면에서 저도 모르게 응원하게 되더라고요. 그리고 그가 세트장을 나갔을 때, TV를 보던 시청자들이 채널을 쿨하게 돌려버리는 장면이 묘한 씁쓸함을 줍니다. 우리의 관심이란 게 얼마나 가벼운 것인지... 여운이 길게 남네요.
+          </p>
+        </div>
+
+        <a href="index.html" class="back-link">
+          ← 메인으로 돌아가기
+        </a>
+
+      </div>
+    </div>
+  </section>
+</main>
+</body>
+</html>
