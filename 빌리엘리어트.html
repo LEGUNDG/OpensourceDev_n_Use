@@ -15,6 +15,7 @@ body{
   background:#f1f2f4;
   color:#111827;
   line-height:1.7;
+  min-height:100vh;
 }
 a{text-decoration:none;color:inherit;}
 
@@ -30,6 +31,12 @@ header .logo{
   font-weight:700;
   letter-spacing:0.18em;
 }
+header nav a{
+  margin-left:18px;
+  font-size:0.9rem;
+  opacity:0.7;
+}
+header nav a:hover{opacity:1;}
 
 /* ===== 레이아웃 ===== */
 main{
@@ -68,6 +75,7 @@ main{
   border-radius:14px;
   box-shadow:0 12px 26px rgba(15,23,42,0.28);
 }
+.top-text{flex:1;}
 .title-label{
   font-size:0.85rem;
   color:#6b7280;
@@ -99,7 +107,7 @@ h1{
   margin-bottom:10px;
 }
 
-/* ===== 출연진 ===== */
+/* ===== 출연진 갤러리 ===== */
 .gallery{
   display:flex;
   flex-wrap:wrap;
@@ -119,14 +127,14 @@ h1{
   text-align:center;
 }
 
-/* ===== 영상 ===== */
+/* ===== 유튜브 ===== */
 .video-wrap iframe{
   max-width:100%;
   width:100%;
   height:315px;
 }
 
-/* ===== 버튼 ===== */
+/* ===== 뒤로가기 ===== */
 .back-link{
   display:inline-block;
   margin-top:22px;
@@ -137,8 +145,12 @@ h1{
   font-size:0.9rem;
   box-shadow:0 6px 12px rgba(15,23,42,0.08);
 }
+.back-link:hover{
+  background:#fffbeb;
+  border-color:#fed7aa;
+}
 
-/* 반응형 */
+/* ===== 반응형 ===== */
 @media (max-width:720px){
   .page-content{padding:22px 18px;}
   .top-layout{flex-direction:column;}
@@ -149,6 +161,12 @@ h1{
 <body>
 <header>
   <div class="logo">CULTURE LOG</div>
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="#movie">영화</a>
+    <a href="#play">연극</a>
+    <a href="#musical">뮤지컬</a>
+  </nav>
 </header>
 
 <main>
@@ -159,14 +177,13 @@ h1{
 <!-- 상단 타이틀 / 포스터 -->
 <div class="top-layout">
   <div class="poster-wrap">
-    <!-- ✅ 네가 올린 빌리 엘리어트 공식 포스터 -->
+    <!-- ✅ 네가 준 포스터 URL -->
     <img
-      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAGQCAYAAAC9eZpEAAA..."
+      src="https://i.namu.wiki/i/vii6A14O2SIL9a6U70qM9tYkLvMt1zE9QrVWamQEYsa5NpVXj87TYk0wfaYBnW1c1ALC2oXO4sy3psRfJCoF1g.webp"
       alt="뮤지컬 빌리 엘리어트 공식 포스터"
       class="poster-img">
   </div>
-
-  <div>
+  <div class="top-text">
     <div class="title-label">뮤지컬 리뷰</div>
     <h1>🎙 빌리 엘리어트 (Billy Elliot)</h1>
     <p class="subtitle">
@@ -182,7 +199,7 @@ h1{
 <p>
 <b>빌리 엘리어트</b>는 2000년 동명 영화를 원작으로 한 뮤지컬로,
 음악은 엘튼 존, 대본과 가사는 리 홀이 맡았다.
-1980년대 영국 광부 파업이라는 현실적인 배경 위에
+1980년대 영국 광부 파업이라는 현실적 배경 위에
 소년의 꿈과 선택을 그려낸 작품이다.
 </p>
 </div>
@@ -201,23 +218,32 @@ h1{
 </p>
 </div>
 
-<!-- 출연 배우 -->
+<!-- 출연진 -->
 <div class="section">
 <h2>🎭 출연 배우 (예시)</h2>
 <div class="gallery">
 
 <div>
-  <img src="https://picsum.photos/300/300?random=501" class="poster3-img">
+  <img
+    src="https://picsum.photos/300/300?random=781"
+    alt="Billy"
+    class="poster3-img">
   <div class="cast-name">빌리 엘리어트 역</div>
 </div>
 
 <div>
-  <img src="https://picsum.photos/300/300?random=502" class="poster3-img">
+  <img
+    src="https://picsum.photos/300/300?random=782"
+    alt="Mrs Wilkinson"
+    class="poster3-img">
   <div class="cast-name">윌킨슨 선생님 역</div>
 </div>
 
 <div>
-  <img src="https://picsum.photos/300/300?random=503" class="poster3-img">
+  <img
+    src="https://picsum.photos/300/300?random=783"
+    alt="Billy’s Dad"
+    class="poster3-img">
   <div class="cast-name">아버지 역</div>
 </div>
 
@@ -230,12 +256,10 @@ h1{
 
 <p>🎙 Electricity</p>
 <div class="video-wrap">
-<iframe src="https://www.youtube.com/embed/dlbA93OCobs" allowfullscreen></iframe>
-</div>
-
-<p>🎙 The Stars Look Down</p>
-<div class="video-wrap">
-<iframe src="https://www.youtube.com/embed/77WZf7cmv4A" allowfullscreen></iframe>
+<iframe
+  src="https://www.youtube.com/embed/dlbA93OCobs"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen></iframe>
 </div>
 </div>
 
@@ -245,21 +269,22 @@ h1{
 <p>
 <b>꿈을 선택하는 일이 곧 용기가 되는 순간</b><br>
 빌리 엘리어트는 단순한 성공담이 아니라,
-억압적인 현실 속에서 자기 자신을 지키는 선택이
-얼마나 큰 용기를 필요로 하는지를 보여준다.
+억압적인 현실 속에서 자신만의 길을 선택하는 순간의
+묵직한 울림을 보여준다.
 </p>
 
 <p>
-<br><b>몸이 말하는 넘버, Electricity</b><br>
-가사보다 움직임이 먼저 감정을 전달하는 장면으로,
-관객 역시 빌리의 숨결을 따라가게 된다.
+<br><b>Electricity가 남긴 여운</b><br>
+춤으로 자신의 감정을 표현하는 장면에서,
+가사보다 움직임이 먼저 말을 걸어온다.
+그 순간 관객도 숨을 함께 내쉬게 된다.
 </p>
 
 <p>
-<br><b>가족의 변화가 남기는 여운</b><br>
-빌리의 꿈을 이해하지 못하던 아버지가
-결국 아들의 편에 서게 되는 과정은
-이 작품이 오래 기억되는 이유다.
+<br><b>가족의 변화가 주는 진정성</b><br>
+빌리의 꿈을 처음에는 이해하지 못하던 아버지가
+결국 그의 편에 서게 되는 과정은
+이 작품이 오래도록 기억되는 이유 중 하나다.
 </p>
 </div>
 
