@@ -15,11 +15,10 @@ body{
   background:#f1f2f4;
   color:#111827;
   line-height:1.7;
-  min-height:100vh;
 }
 a{text-decoration:none;color:inherit;}
 
-/* ===== 헤더 ===== */
+/* Header */
 header{
   padding:16px 40px;
   display:flex;
@@ -38,13 +37,12 @@ header nav a{
 }
 header nav a:hover{opacity:1;}
 
-/* ===== 레이아웃 ===== */
+/* Main layout */
 main{
   max-width:1000px;
   margin:0 auto 40px;
   padding:0 16px 40px;
 }
-
 .page-shell{
   margin-top:20px;
   border-radius:16px;
@@ -61,7 +59,7 @@ main{
   padding:28px 32px 30px;
 }
 
-/* ===== 상단 ===== */
+/* Top layout */
 .top-layout{
   display:flex;
   gap:24px;
@@ -69,14 +67,18 @@ main{
   margin-bottom:24px;
   flex-wrap:wrap;
 }
-.poster-wrap{flex:0 0 260px;}
+.poster-wrap{
+  flex:0 0 260px;
+}
 .poster-img{
   width:100%;
   max-width:260px;
   border-radius:14px;
   box-shadow:0 12px 26px rgba(15,23,42,0.28);
 }
-.top-text{flex:1;}
+.top-text{
+  flex:1 1 0;
+}
 .title-label{
   font-size:0.85rem;
   color:#6b7280;
@@ -93,7 +95,7 @@ h1{
   color:#4b5563;
 }
 
-/* ===== 섹션 ===== */
+/* Section card */
 .section{
   margin-top:18px;
   background:#ffffff;
@@ -107,7 +109,7 @@ h1{
   margin-bottom:10px;
 }
 
-/* 배우 */
+/* Gallery */
 .gallery{
   display:flex;
   gap:18px;
@@ -127,18 +129,17 @@ h1{
   text-align:center;
 }
 
-/* 영상 */
+/* Video */
 .video-wrap{
   margin-top:8px;
-  aspect-ratio:16/9;
 }
 .video-wrap iframe{
+  max-width:100%;
   width:100%;
-  height:100%;
-  border:0;
+  height:315px;
 }
 
-/* 버튼 */
+/* Back link */
 .back-link{
   display:inline-block;
   margin-top:22px;
@@ -147,6 +148,7 @@ h1{
   background:#ffffff;
   border:1px solid #e5e7eb;
   font-size:0.9rem;
+  color:#1f2937;
   box-shadow:0 6px 12px rgba(15,23,42,0.08);
 }
 .back-link:hover{
@@ -154,10 +156,18 @@ h1{
   border-color:#fed7aa;
 }
 
-/* 반응형 */
+/* Responsive */
 @media (max-width:720px){
-  .page-content{padding:22px 18px;}
-  .top-layout{flex-direction:column;}
+  .page-content{
+    padding:22px 18px 24px;
+  }
+  .top-layout{
+    flex-direction:column;
+  }
+  .poster-wrap{
+    flex:none;
+    max-width:260px;
+  }
 }
 </style>
 </head>
@@ -174,96 +184,85 @@ h1{
 </header>
 
 <main>
-<section class="page-shell">
-<div class="page-inner">
-<div class="page-content">
+  <section class="page-shell">
+    <div class="page-inner">
+      <div class="page-content">
 
-<!-- 상단 -->
-<div class="top-layout">
-  <div class="poster-wrap">
-    <!-- ✅ 네가 올린 위키드 공식 포스터 -->
-    <img
-      src="wicked-poster.png"
-      alt="뮤지컬 위키드 공식 포스터"
-      class="poster-img">
-  </div>
+        <!-- 상단 타이틀 / 포스터 -->
+        <div class="top-layout">
+          <div class="poster-wrap">
 
-  <div class="top-text">
-    <div class="title-label">뮤지컬 리뷰</div>
-    <h1>🎙 위키드 (Wicked)</h1>
-    <p class="subtitle">
-      ‘오즈의 마법사’의 이면에서,
-      엘파바와 글린다가 어떻게 ‘사악한 마녀’와 ‘착한 마녀’가 되었는지를 다시 쓰는 이야기.
-    </p>
-  </div>
-</div>
+            <!-- ✅ 여기에 포스터가 잘 뜰 이미지 URL -->
+            <img
+              src="https://i.namu.wiki/i/lL8ZOlUTBLg3PRBW6NzON-Fkxc1PKPn52UQj-5ccxY6zrbsoIOZUjbrf4xYHAcRTFvU3WK2p8WjN5RCMbtYuZ9lWL_tNYpSa0kRexWCuDeYivqx-rlc5HOLCpoMmrfSMgMnI___2gt1rYxJgHqan5g.webp"
+              alt="뮤지컬 위키드 공식 포스터"
+              class="poster-img"
+              loading="lazy"
+            >
 
-<!-- 작품 소개 -->
-<div class="section">
-<h2>📌 작품 소개</h2>
-<p>
-<b>위키드(Wicked)</b>는 그레고리 매과이어의 소설을 원작으로 한 브로드웨이 뮤지컬이다.
-2003년 초연 이후 지금까지도 전 세계적으로 사랑받고 있으며,
-<i>Defying Gravity</i>, <i>Popular</i> 같은 명곡으로 잘 알려져 있다.
-</p>
-</div>
+          </div>
+          <div class="top-text">
+            <div class="title-label">뮤지컬 리뷰</div>
+            <h1>🎙 위키드 (Wicked)</h1>
+            <p class="subtitle">
+              ‘오즈의 마법사’의 이면에서,
+              초록 마녀 엘파바와 글린다가 어떻게 ‘사악한 마녀’와 ‘착한 마녀’가 되었는지를
+              다시 쓰는 이야기.
+            </p>
+          </div>
+        </div>
 
-<!-- 줄거리 -->
-<div class="section">
-<h2>📖 줄거리</h2>
-<p>
-초록 피부를 가진 엘파바는 차별 속에서 성장한다.
-마법 학교에서 인기 많은 글린다와 만나 친구가 되지만,
-권력과 진실을 둘러싼 선택 앞에서 결국 서로 다른 길을 걷게 된다.
-</p>
-<p>
-세상은 진실을 말한 엘파바를 ‘사악한 마녀’라 부르고,
-글린다는 체제 안에서 ‘착한 마녀’가 된다.
-작품은 우리가 알고 있던 선과 악의 기준을 근본적으로 흔든다.
-</p>
-</div>
+        <!-- 작품 소개 -->
+        <div class="section">
+          <h2>📌 작품 소개</h2>
+          <p>
+            <b>위키드(Wicked)</b>는 그레고리 매과이어의 소설을 원작으로 한 브로드웨이 뮤지컬이다.
+            2003년 초연 이후 전 세계적으로 사랑받고 있으며,
+            <i>Defying Gravity</i>, <i>Popular</i> 같은 넘버로 유명하다.
+          </p>
+        </div>
 
-<!-- 배우 -->
-<div class="section">
-<h2>🎭 오리지널 브로드웨이 캐스트</h2>
-<div class="gallery">
-  <div>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Idina_Menzel_at_the_2023_Capital_Pride_concert_-_7_%28cropped%29.jpg"
-         class="poster3-img">
-    <div class="cast-name">Idina Menzel · 엘파바</div>
-  </div>
-  <div>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Kristin_Chenoweth_by_Gage_Skidmore_3.jpg"
-         class="poster3-img">
-    <div class="cast-name">Kristin Chenoweth · 글린다</div>
-  </div>
-</div>
-</div>
+        <!-- 줄거리 -->
+        <div class="section">
+          <h2>📖 줄거리</h2>
+          <p>
+            초록 피부를 가진 엘파바는 차별 속에서 성장한다.
+            마법 학교에서 인기 많은 글린다와 친구가 되지만,
+            권력과 진실을 둘러싼 선택 앞에서 서로 다른 길을 걷게 된다.
+          </p>
+          <p>
+            세상은 진실을 말한 엘파바를 ‘사악한 마녀’라 부르고,
+            글린다는 체제 안에서 ‘착한 마녀’가 된다.
+          </p>
+        </div>
 
-<!-- 넘버 -->
-<div class="section">
-<h2>🎼 대표 넘버</h2>
-<p>🎙 Defying Gravity</p>
-<div class="video-wrap">
-<iframe src="https://www.youtube.com/embed/AoON1CyhQAM" allowfullscreen></iframe>
-</div>
-</div>
+        <!-- 출연 배우 -->
+        <div class="section">
+          <h2>🎭 출연 배우 (예시)</h2>
+          <div class="gallery">
+            <div>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Idina_Menzel_at_the_2023_Capital_Pride_concert_-_7_%28cropped%29.jpg"
+                class="poster3-img">
+              <div class="cast-name">Idina Menzel · 엘파바</div>
+            </div>
+            <div>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Kristin_Chenoweth_by_Gage_Skidmore_3.jpg"
+                class="poster3-img">
+              <div class="cast-name">Kristin Chenoweth · 글린다</div>
+            </div>
+          </div>
+        </div>
 
-<!-- 감상 -->
-<div class="section">
-<h2>📝 감상평</h2>
-<p>
-위키드는 ‘악당’의 시선으로 세계를 다시 바라보게 만드는 작품이다.
-특히 <i>Defying Gravity</i>는
-자기 선택을 선언하는 순간의 해방감을 극대화한다.
-</p>
-</div>
+        <!-- 뒤로가기 버튼 -->
+        <a href="index.html" class="back-link">
+          ← 메인으로 돌아가기
+        </a>
 
-<a href="index.html" class="back-link">← 메인으로 돌아가기</a>
-
-</div>
-</div>
-</section>
+      </div>
+    </div>
+  </section>
 </main>
 </body>
 </html>
