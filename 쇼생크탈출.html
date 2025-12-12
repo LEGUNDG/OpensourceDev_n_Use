@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>쇼생크 탈출 – 문화 생활 기록</title>
+
+<link rel="stylesheet" as="style" crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+
+<style>
+/* 기존 쉬어메드니스.html의 CSS와 동일 */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:Pretendard, system-ui,-apple-system,"Segoe UI",sans-serif;
+  background:#f1f2f4;
+  color:#111827;
+  line-height:1.7;
+  min-height:100vh;
+}
+a{text-decoration:none;color:inherit;}
+
+header{
+  padding:16px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+header .logo{
+  font-size:1.1rem;
+  font-weight:700;
+  letter-spacing:0.18em;
+}
+header nav a{
+  margin-left:18px;
+  font-size:0.9rem;
+  opacity:0.7;
+  text-decoration:none;
+  color:#111827;
+}
+header nav a:hover{
+  opacity:1;
+}
+
+main{
+  max-width:1000px;
+  margin:0 auto 40px;
+  padding:0 16px 40px;
+}
+
+.page-shell{
+  margin-top:20px;
+  border-radius:16px;
+  background:#e5e7eb;
+  box-shadow:0 16px 40px rgba(15,23,42,0.18);
+  padding:18px 14px 24px;
+}
+.page-inner{
+  position:relative;
+  border-radius:14px;
+  overflow:hidden;
+  background:linear-gradient(to bottom right, #f9fafb 0%, #e5e7eb 60%, #f3f4f6 100%);
+}
+
+.page-content{
+  position:relative;
+  z-index:1;
+  padding:28px 32px 30px;
+}
+
+.top-layout{
+  display:flex;
+  gap:24px;
+  align-items:flex-start;
+  margin-bottom:24px;
+  flex-wrap:wrap;
+}
+.poster-wrap{
+  flex:0 0 260px;
+}
+.poster-img{
+  display:block;
+  width:100%;
+  max-width:260px;
+  height:auto;
+  border-radius:14px;
+  object-fit:cover;
+  box-shadow:0 12px 26px rgba(15,23,42,0.28);
+}
+.top-text{
+  flex:1 1 0;
+}
+.title-label{
+  font-size:0.85rem;
+  color:#6b7280;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  margin-bottom:4px;
+}
+h1{
+  font-size:1.6rem;
+  font-weight:800;
+  margin-bottom:8px;
+}
+.subtitle{
+  font-size:0.92rem;
+  color:#4b5563;
+}
+
+.section{
+  margin-top:18px;
+  background:#ffffff;
+  padding:18px 20px 20px;
+  border-radius:14px;
+  border:1px solid #e5e7eb;
+  box-shadow:0 8px 20px rgba(15,23,42,0.08);
+}
+.section h2{
+  font-size:1.1rem;
+  margin-bottom:10px;
+}
+
+.gallery{
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px;
+  margin-top:8px;
+}
+.poster3-img{
+  display:block;
+  width:160px;
+  height:160px;
+  object-fit:cover;
+  border-radius:12px;
+  box-shadow:0 10px 22px rgba(15,23,42,0.25);
+}
+.cast-name{
+  margin-top:6px;
+  font-size:0.9rem;
+  font-weight:600;
+  text-align:center;
+}
+
+.video-wrap{
+  margin-top:8px;
+  margin-bottom:8px;
+}
+.video-wrap iframe{
+  max-width:100%;
+}
+
+.back-link{
+  display:inline-block;
+  margin-top:22px;
+  padding:10px 16px;
+  border-radius:10px;
+  background:#ffffff;
+  border:1px solid #e5e7eb;
+  font-size:0.9rem;
+  color:#1f2937;
+  box-shadow:0 6px 12px rgba(15,23,42,0.08);
+  transition:.15s;
+}
+.back-link:hover{
+  background:#fffbeb;
+  border-color:#fed7aa;
+}
+
+@media (max-width:720px){
+  .page-content{
+    padding:22px 18px 24px;
+  }
+  .top-layout{
+    flex-direction:column;
+  }
+  .poster-wrap{
+    flex:none;
+    max-width:260px;
+  }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">CULTURE LOG</div>
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="#movie">영화</a>
+    <a href="#play">연극</a>
+    <a href="#musical">뮤지컬</a>
+  </nav>
+</header>
+
+<main>
+  <section class="page-shell">
+    <div class="page-inner">
+      <div class="page-content">
+
+        <div class="top-layout">
+          <div class="poster-wrap">
+            <img src="https://image.tmdb.org/t/p/original/9O7gLzmreU0nGkIB6K3BsJbzvNv.jpg"
+                 alt="쇼생크 탈출 포스터"
+                 class="poster-img">
+          </div>
+          <div class="top-text">
+            <div class="title-label">영화 리뷰</div>
+            <h1>🔨 쇼생크 탈출</h1>
+            <p class="subtitle">
+             <b>"희망은 좋은 것입니다. 아마 가장 소중한 것이죠."</b><br>
+             억울한 누명을 쓰고 감옥에 갇힌 남자가 20년간 설계한 자유를 향한 갈망.
+            </p>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>📌 작품 소개</h2>
+          <p>
+            <b>쇼생크 탈출 (The Shawshank Redemption)</b>은 스티븐 킹의 소설을 원작으로 한 1994년 영화다. 개봉 당시에는 흥행에 실패했으나, 2차 판권 시장에서 입소문을 타며 재평가받았고, 현재는 전 세계 영화 팬들이 꼽는 '인생 최고의 영화' 1위(IMDb 평점 1위) 자리를 굳건히 지키고 있다.
+            가장 절망적인 공간인 교도소 '쇼생크'에서 피어나는 두 남자의 우정과 자유, 그리고 꺾이지 않는 희망을 감동적으로 그려냈다. 팀 로빈스와 모건 프리먼의 절제된 연기, 그리고 가슴을 울리는 명대사들이 가득한 걸작이다.
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>📖 줄거리</h2>
+          <p>
+            잘나가는 은행 부지점장 '앤디 듀프레인(팀 로빈스)'은 아내와 그녀의 정부를 살해했다는 누명을 쓰고 악명 높은 쇼생크 교도소에 수감된다. 교도소 내의 폭력과 부조리에 시달리던 그는, 교도소 내 모든 물건을 구해주는 '레드(모건 프리먼)'와 깊은 우정을 나누게 된다.
+          </p>
+          <p>
+            앤디는 은행가로서의 지식을 이용해 교도소장과 간수들의 불법 자금 세탁을 도우며 교도소 내에서의 입지를 굳힌다. 그 대가로 도서관을 증축하고 동료 죄수들에게 맥주를 돌리는 등 인간다운 삶을 위한 작은 변화들을 만들어낸다.
+          </p>
+          <p>
+            그렇게 19년이 흐른 어느 폭풍우 치는 밤. 앤디의 감방에서 감쪽같이 그가 사라진다. 그가 20년 가까이 벽에 붙여놓았던 여배우의 포스터 뒤에는, 조그만 조각용 망치 하나로 파낸 거대한 탈출구가 숨겨져 있었다. 자유를 향해 하수구를 기어 나온 앤디가 빗속에서 포효하는 장면은 관객들에게 잊을 수 없는 카타르시스를 선사한다.
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>🎭 출연 배우 </h2>
+          <div class="gallery">
+            <div>
+              <img src="https://image.tmdb.org/t/p/w500/TimRobbins.jpg"
+                   alt="앤디 역 팀 로빈스"
+                   class="poster3-img" style="background:#ddd">
+              <div class="cast-name">앤디 역 팀 로빈스</div>
+            </div>
+
+            <div>
+              <img src="https://image.tmdb.org/t/p/w500/MorganFreeman.jpg"
+                   alt="레드 역 모건 프리먼"
+                   class="poster3-img" style="background:#ddd">
+              <div class="cast-name">레드 역 모건 프리먼</div>
+            </div>
+
+            <div>
+              <img src="https://image.tmdb.org/t/p/w500/BobGunton.jpg"
+                   alt="소장 역 밥 건튼"
+                   class="poster3-img" style="background:#ddd">
+              <div class="cast-name">소장 역 밥 건튼</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>🎼 대표 OST</h2>
+
+          <p>🎙 Sull'aria (피가로의 결혼)</p>
+          <div class="video-wrap">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/qzuM2XTnpSA?si=example" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+
+          <p>🎙 Shawshank Redemption</p>
+          <div class="video-wrap">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/arsOwUMw7x4?si=example" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>📝 감상평</h2>
+          <p>
+            <b>희망은 너를 자유롭게 하리라.</b><br>
+            살면서 힘들 때마다 다시 꺼내 보는 영화입니다. 앤디가 오물로 가득 찬 하수구를 기어 나와 비를 맞으며 자유를 만끽하는 장면은 볼 때마다 가슴이 벅차오릅니다. "바쁘게 살거나, 바쁘게 죽거나."라는 대사가 마음에 콕 박히네요. 진정한 자유의 의미를 깨닫게 해 준 명작입니다.
+          </p>
+
+          <p>
+            <br><b>최고의 브로맨스, 최고의 엔딩.</b><br>
+            앤디와 레드의 국경과 나이를 초월한 우정이 너무 아름답습니다. 감옥이라는 삭막한 공간에서도 인간의 존엄을 잃지 않으려 노력하는 모습이 감동적이었어요. 마지막 지와타네호 해변에서의 재회 씬은 정말 눈물 없이는 볼 수 없는 최고의 해피엔딩이었습니다.
+          </p>
+
+          <p>
+            <br><b>평점 1위에는 이유가 있다.</b><br>
+            왜 사람들이 이 영화를 인생 영화로 꼽는지 알 것 같습니다. 단순히 탈옥 영화가 아니라, 인간 승리의 드라마이자 희망에 대한 찬가입니다. 앤디가 방송실 문을 잠그고 모차르트의 음악을 틀었을 때, 교도소의 모든 죄수들이 하늘을 올려다보는 장면은 정말 압권이었습니다.
+          </p>
+        </div>
+
+        <a href="index.html" class="back-link">
+          ← 메인으로 돌아가기
+        </a>
+
+      </div>
+    </div>
+  </section>
+</main>
+</body>
+</html>
