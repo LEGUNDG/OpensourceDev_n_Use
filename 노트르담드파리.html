@@ -19,7 +19,6 @@ body{
 }
 a{text-decoration:none;color:inherit;}
 
-/* ===== 공통 헤더 (메인 페이지와 톤 맞춤) ===== */
 header{
   padding:16px 40px;
   display:flex;
@@ -35,21 +34,15 @@ header nav a{
   margin-left:18px;
   font-size:0.9rem;
   opacity:0.7;
-  text-decoration:none;
-  color:#111827;
 }
-header nav a:hover{
-  opacity:1;
-}
+header nav a:hover{opacity:1;}
 
-/* ===== 레이아웃 ===== */
 main{
   max-width:1000px;
   margin:0 auto 40px;
   padding:0 16px 40px;
 }
 
-/* 바깥 껍데기 (메인 hero-shell 느낌) */
 .page-shell{
   margin-top:20px;
   border-radius:16px;
@@ -58,20 +51,14 @@ main{
   padding:18px 14px 24px;
 }
 .page-inner{
-  position:relative;
   border-radius:14px;
   overflow:hidden;
   background:linear-gradient(to bottom right, #f9fafb 0%, #e5e7eb 60%, #f3f4f6 100%);
 }
-
-/* 안쪽 콘텐츠 카드 */
 .page-content{
-  position:relative;
-  z-index:1;
   padding:28px 32px 30px;
 }
 
-/* 상단 타이틀 + 포스터 정보 */
 .top-layout{
   display:flex;
   gap:24px;
@@ -79,26 +66,18 @@ main{
   margin-bottom:24px;
   flex-wrap:wrap;
 }
-.poster-wrap{
-  flex:0 0 260px;
-}
+.poster-wrap{flex:0 0 260px;}
 .poster-img{
-  display:block;
   width:100%;
   max-width:260px;
-  height:auto;
   border-radius:14px;
-  object-fit:cover;
   box-shadow:0 12px 26px rgba(15,23,42,0.28);
 }
-.top-text{
-  flex:1 1 0;
-}
+.top-text{flex:1;}
 .title-label{
   font-size:0.85rem;
   color:#6b7280;
   letter-spacing:0.14em;
-  text-transform:uppercase;
   margin-bottom:4px;
 }
 h1{
@@ -111,7 +90,6 @@ h1{
   color:#4b5563;
 }
 
-/* 섹션 카드 공통 */
 .section{
   margin-top:18px;
   background:#ffffff;
@@ -125,15 +103,12 @@ h1{
   margin-bottom:10px;
 }
 
-/* 배우 갤러리 */
 .gallery{
   display:flex;
-  flex-wrap:wrap;
   gap:18px;
-  margin-top:8px;
+  flex-wrap:wrap;
 }
 .poster3-img{
-  display:block;
   width:160px;
   height:160px;
   object-fit:cover;
@@ -147,16 +122,8 @@ h1{
   text-align:center;
 }
 
-/* 유튜브 iframe 반응형 컨테이너 */
-.video-wrap{
-  margin-top:8px;
-  margin-bottom:8px;
-}
-.video-wrap iframe{
-  max-width:100%;
-}
+.video-wrap iframe{max-width:100%;}
 
-/* 뒤로가기 버튼 */
 .back-link{
   display:inline-block;
   margin-top:22px;
@@ -165,30 +132,20 @@ h1{
   background:#ffffff;
   border:1px solid #e5e7eb;
   font-size:0.9rem;
-  color:#1f2937;
   box-shadow:0 6px 12px rgba(15,23,42,0.08);
-  transition:.15s;
 }
 .back-link:hover{
   background:#fffbeb;
   border-color:#fed7aa;
 }
 
-/* 반응형 */
 @media (max-width:720px){
-  .page-content{
-    padding:22px 18px 24px;
-  }
-  .top-layout{
-    flex-direction:column;
-  }
-  .poster-wrap{
-    flex:none;
-    max-width:260px;
-  }
+  .page-content{padding:22px 18px;}
+  .top-layout{flex-direction:column;}
 }
 </style>
 </head>
+
 <body>
 <header>
   <div class="logo">CULTURE LOG</div>
@@ -201,155 +158,110 @@ h1{
 </header>
 
 <main>
-  <section class="page-shell">
-    <div class="page-inner">
-      <div class="page-content">
+<section class="page-shell">
+<div class="page-inner">
+<div class="page-content">
 
-        <!-- 상단 타이틀 / 포스터 -->
-        <div class="top-layout">
-          <div class="poster-wrap">
-            <!-- 포스터 이미지는 실제 파일 경로로 교체 -->
-            <img src="notre-dame-poster.jpg"
-                 alt="뮤지컬 노트르담 드 파리 포스터"
-                 class="poster-img">
-          </div>
-          <div class="top-text">
-            <div class="title-label">뮤지컬 리뷰</div>
-            <h1>🎙 노트르담 드 파리 (Notre-Dame de Paris)</h1>
-            <p class="subtitle">
-              빅토르 위고의 소설을 프랑스 뮤지컬로 재탄생시킨 작품.  
-              거대한 성당과 록·샹송 스타일의 넘버가 어우러진 비극적 러브스토리.
-            </p>
-          </div>
-        </div>
+<!-- 상단 -->
+<div class="top-layout">
+  <div class="poster-wrap">
+    <img
+      src="https://commons.wikimedia.org/wiki/Special:FilePath/%C2%ABNotre%20Dame%20de%20Paris%C2%BB.jpg"
+      alt="뮤지컬 노트르담 드 파리 포스터"
+      class="poster-img">
+  </div>
 
-        <!-- 작품 소개 -->
-        <div class="section">
-          <h2>📌 작품 소개</h2>
-          <p>
-            <b>노트르담 드 파리(Notre-Dame de Paris)</b>는 빅토르 위고의 동명 소설을 바탕으로 
-            작사가 뤽 플라몽동(Luc Plamondon)과 작곡가 리샤르 코시아노(Richard Cocciante)가 만든 프랑스어 뮤지컬이다. 
-            1998년 파리 팰레 데 콩그레에서 초연된 이후 프랑스와 캐나다, 이탈리아, 한국 등 
-            전 세계에서 꾸준히 재공연되고 있는 장기 흥행작이다. 
-            록과 샹송이 섞인 음악, 거대한 성당 세트를 활용한 무대, 
-            그리고 <i>“Belle”</i>, <i>“Le Temps des Cathédrales”</i> 같은 명곡들로 
-            프랑스 뮤지컬의 대표작으로 자리 잡았다.
-          </p>
-        </div>
+  <div class="top-text">
+    <div class="title-label">뮤지컬 리뷰</div>
+    <h1>🎙 노트르담 드 파리 (Notre-Dame de Paris)</h1>
+    <p class="subtitle">
+      빅토르 위고의 소설을 프랑스 뮤지컬로 재탄생시킨 작품.
+      록·샹송 스타일의 넘버와 비극적 서사가 어우러진 대표작.
+    </p>
+  </div>
+</div>
 
-        <!-- 줄거리 -->
-        <div class="section">
-          <h2>📖 줄거리</h2>
-          <p>
-            배경은 15세기 파리, 노트르담 성당이다. 
-            종지기 콰지모도는 기형적인 외모 때문에 사람들에게 괴물 취급을 받지만, 
-            성당의 주교 프롤로에게 길러지며 성당 안에서만 살아온 인물이다. 
-            어느 날 거리 축제에서 집시 무용수 에스메랄다를 본 순간, 
-            콰지모도는 한 번도 느껴보지 못한 사랑의 감정을 품게 된다.
-          </p>
-          <p>
-            그러나 에스메랄다를 향한 마음은 콰지모도만이 아니다. 
-            프롤로 역시 금지된 욕망에 사로잡혀 그녀에게 집착하고, 
-            근위대장 페뷔스는 약혼녀가 있으면서도 에스메랄다에게 끌린다. 
-            세 남자의 뒤엉킨 사랑과 욕망, 그리고 집시들에 대한 차별과 폭력 속에서 
-            에스메랄다는 점차 희생양이 되어 간다.
-          </p>
-          <p>
-            무고한 에스메랄다가 마녀로 몰려 처형당할 위기에 처하자, 
-            콰지모도는 그녀를 성당 안으로 구출하며 “보호권”을 외친다. 
-            그러나 성당의 안전도 오래가지는 못하고, 
-            결국 비극적인 결말로 이어지면서 작품은 사랑, 신앙, 권력, 
-            그리고 ‘누가 진짜 괴물인가’라는 질문을 남긴 채 막을 내린다.
-          </p>
-        </div>
+<!-- 작품 소개 -->
+<div class="section">
+<h2>📌 작품 소개</h2>
+<p>
+<b>노트르담 드 파리</b>는 1998년 파리 초연 이후 전 세계에서 공연된 프랑스 뮤지컬이다.
+록과 샹송이 결합된 음악, 상징적인 성당 무대,
+<i>Belle</i>, <i>Le Temps des Cathédrales</i> 같은 명곡으로
+프랑스 뮤지컬의 아이콘이 되었다.
+</p>
+</div>
 
-        <!-- 출연 배우 -->
-        <div class="section">
-          <h2>🎭 출연 배우 (오리지널 프랑스 캐스트 예시)</h2>
-          <div class="gallery">
-            <div>
-              <img src="garou-quasimodo.jpg"
-                   alt="Garou - 콰지모도 역"
-                   class="poster3-img">
-              <div class="cast-name">콰지모도 역 Garou</div>
-            </div>
+<!-- 줄거리 -->
+<div class="section">
+<h2>📖 줄거리</h2>
+<p>
+15세기 파리, 노트르담 성당의 종지기 콰지모도는 집시 무희 에스메랄다를 사랑하게 된다.
+그러나 그녀를 향한 욕망은 프롤로와 페뷔스에게도 향하고,
+차별과 권력 속에서 비극은 피할 수 없는 결말로 향한다.
+</p>
+</div>
 
-            <div>
-              <img src="helene-segara-esmeralda.jpg"
-                   alt="Hélène Ségara - 에스메랄다 역"
-                   class="poster3-img">
-              <div class="cast-name">에스메랄다 역 Hélène Ségara</div>
-            </div>
+<!-- 배우 -->
+<div class="section">
+<h2>🎭 오리지널 캐스트</h2>
+<div class="gallery">
 
-            <div>
-              <img src="daniel-lavoie-frollo.jpg"
-                   alt="Daniel Lavoie - 프롤로 역"
-                   class="poster3-img">
-              <div class="cast-name">프롤로 역 Daniel Lavoie</div>
-            </div>
-          </div>
-        </div>
+<div>
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Garou%2020060613%20Fnac%2004.jpg"
+     class="poster3-img">
+<div class="cast-name">Garou · 콰지모도</div>
+</div>
 
-        <!-- 넘버 -->
-        <div class="section">
-          <h2>🎼 대표 넘버</h2>
+<div>
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Helene%20segara.JPG"
+     class="poster3-img">
+<div class="cast-name">Hélène Ségara · 에스메랄다</div>
+</div>
 
-          <p>🎙 Belle</p>
-          <div class="video-wrap">
-            <iframe width="560" height="315"
-              src="https://www.youtube.com/embed/BQxZgvgbpC4"
-              title="Notre Dame de Paris - Belle [OFFICIAL MUSIC VIDEO]" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          </div>
+<div>
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Daniel%20Lavoie.jpg"
+     class="poster3-img">
+<div class="cast-name">Daniel Lavoie · 프롤로</div>
+</div>
 
-          <p>🎙 Le Temps des Cathédrales</p>
-          <div class="video-wrap">
-            <iframe width="560" height="315"
-              src="https://www.youtube.com/embed/MNk_8qErO2c"
-              title="Notre Dame de Paris - Le Temps des Cathédrales" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          </div>
-        </div>
+</div>
+</div>
 
-        <!-- 감상평 -->
-        <div class="section">
-          <h2>📝 감상평</h2>
-          <p>
-            <b>노래가 서사를 끌고 가는 뮤지컬</b><br>
-            대사가 거의 없이 넘버들로만 이야기가 전개되기 때문에, 
-            가사와 멜로디가 곧 인물의 심리와 서사라는 점이 인상적이다. 
-            <i>Belle</i> 한 곡 안에 세 남자의 욕망과 고뇌가 한꺼번에 폭발하는 장면을 보고 나면, 
-            왜 이 곡이 프랑스어권을 넘어 전 세계적으로 사랑받는지 알 것 같았다.
-          </p>
+<!-- 넘버 -->
+<div class="section">
+<h2>🎼 대표 넘버</h2>
 
-          <p>
-            <br><b>성당이라는 거대한 무대, 그리고 인간의 욕망</b><br>
-            노트르담 성당 세트는 단순한 배경이 아니라 인물들을 압도하는 존재로 느껴진다. 
-            성당이 신의 집인지, 권력자의 성벽인지 모호해지는 순간마다 
-            인간의 욕망과 죄책감이 더 또렷하게 드러난다. 
-            특히 프롤로가 성당 안에서 부르는 곡들을 통해 
-            ‘신을 믿는 사람도 얼마든지 괴물이 될 수 있다’는 아이러니가 잘 드러난다.
-          </p>
+<p>🎙 Belle</p>
+<div class="video-wrap">
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/BQxZgvgbpC4"
+allowfullscreen></iframe>
+</div>
 
-          <p>
-            <br><b>비극을 통해 남는 질문</b><br>
-            결말은 철저한 비극이지만, 그렇기 때문에 오히려 오래 남는다. 
-            누가 죄인이고, 누가 피해자인지 단순하게 나눌 수 없는 상황 속에서 
-            관객은 결국 ‘우리는 타인을 얼마나 쉽게 단정하고 있는가’라는 질문을 갖게 된다. 
-            화려한 군무와 상업적 볼거리보다, 비극이 던지는 여운을 즐기고 싶은 사람에게 추천하고 싶은 작품이다.
-          </p>
-        </div>
+<p>🎙 Le Temps des Cathédrales</p>
+<div class="video-wrap">
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/MNk_8qErO2c"
+allowfullscreen></iframe>
+</div>
+</div>
 
-        <!-- 메인으로 돌아가기 -->
-        <a href="index.html" class="back-link">
-          ← 메인으로 돌아가기
-        </a>
+<!-- 감상 -->
+<div class="section">
+<h2>📝 감상평</h2>
+<p>
+대사가 아닌 노래로 서사를 밀어붙이는 구조가 강렬하다.
+성당이라는 거대한 공간 속에서 인간의 욕망과 위선이 적나라하게 드러나며,
+비극이 남기는 질문이 오래도록 남는다.
+</p>
+</div>
 
-      </div>
-    </div>
-  </section>
+<a href="index.html" class="back-link">← 메인으로 돌아가기</a>
+
+</div>
+</div>
+</section>
 </main>
 </body>
 </html>
