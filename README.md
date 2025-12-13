@@ -100,20 +100,20 @@ OpensourceDev_n_Use/<br>
 <a href="https://ibb.co/BVHrssYk"><img src="https://i.ibb.co/270sKKpJ/image01.png" alt="image01" border="0"></a>
 ● : 작업 수행 기간
 
-🔄 협업 방식
+## 🔄 협업 방식
 - GitHub 저장소 공동 사용
 - 역할별 콘텐츠 분리 작업
 - 파일 단위 작업으로 충돌 최소화
 - 메인 페이지는 조장이 통합 관리
 
-📋 요구사항 충족 여부
+## 📋 요구사항 충족 여부
  - GitHub 저장소 생성
  - HTML 기반 웹페이지 구현
  - 팀원별 역할 분담
  - GitHub Pages 배포
  - README, WBS, 간트차트 작성
 
-📈 확장 가능성
+## 📈 확장 가능성
 - 반응형 웹 디자인 적용
 - JavaScript 기반 검색·필터 기능 추가
 - 외부 문화 콘텐츠 API 연동
